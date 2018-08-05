@@ -1,0 +1,1504 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f9b969d9906, pid=31868, tid=0x00007f9b3479f700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_172-b11) (build 1.8.0_172-b11)
+# Java VM: OpenJDK 64-Bit Server VM (25.172-b11 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x69e906]
+#
+# Core dump written. Default location: /home/patryk/Dokumenty/programowanie/javafx-automat/core or core.31868
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f9b903f2800):  JavaThread "JavaFX Application Thread" [_thread_in_vm, id=31905, stack(0x00007f9b3469f000,0x00007f9b347a0000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 128 (SI_KERNEL), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00007f9b903f2800, RCX=0x00007f9b90321f68, RDX=0x02ea37a60000013b
+RSP=0x00007f9b34788020, RBP=0x00007f9b34788190, RSI=0x00007f9b347881b0, RDI=0x00007f9b903f29e0
+R8 =0x00007f9b347881e0, R9 =0x00007f9b903f2800, R10=0x00007f9b2c19dee8, R11=0x00007f9b815322c0
+R12=0x00007f9b347881e0, R13=0x00007f9b903f29e0, R14=0x00007f9b90321f68, R15=0x00007f9b903f2800
+RIP=0x00007f9b969d9906, EFLAGS=0x0000000000010202, CSGSFS=0x002b000000000033, ERR=0x0000000000000000
+  TRAPNO=0x000000000000000d
+
+Top of Stack: (sp=0x00007f9b34788020)
+0x00007f9b34788020:   00007f9b34788130 00007f9b347880e0
+0x00007f9b34788030:   00007f9b34788050 00007f9b903f29e0
+0x00007f9b34788040:   00007f9b34788070 00007f9b501f37c0
+0x00007f9b34788050:   00007f9b80d0a150 00007f9b903f2800
+0x00007f9b34788060:   00007f9b80d0a150 00007f9b903f2800
+0x00007f9b34788070:   00007f9b903f2c00 00007f9b4c000c90
+0x00007f9b34788080:   00007f9b4c000ca0 00007f9b4c001078
+0x00007f9b34788090:   00000000000003d8 00000000000080b0
+0x00007f9b347880a0:   00007f9b80d0a150 00007f9b903f2800
+0x00007f9b347880b0:   00000000903f2800 00007f9b2c19dee0
+0x00007f9b347880c0:   0000000000000000 00000000ecfbdf48
+0x00007f9b347880d0:   00007f9b80d0a150 00007f9b903f2800
+0x00007f9b347880e0:   00007f9b34788778 00000000ecfbdfd8
+0x00007f9b347880f0:   00007f9b0000006f 6e9f7e5900000056
+0x00007f9b34788100:   00000000ec8eedb8 00007f9b00000004
+0x00007f9b34788110:   00007f9b34788300 00007f9b347882d0
+0x00007f9b34788120:   00007f9b34788180 00000001000001c0
+0x00007f9b34788130:   00007f9b347882b0 00007f9b347880e8
+0x00007f9b34788140:   00007f9b34788129 0000000800000005
+0x00007f9b34788150:   00007f9b34788100 6e9f7e59f8194200
+0x00007f9b34788160:   0000000000000000 00007f9b903f2800
+0x00007f9b34788170:   00007f9b347881e0 00007f9b903f29e0
+0x00007f9b34788180:   00007f9b90321f68 00007f9b34788270
+0x00007f9b34788190:   00007f9b34788260 00007f9b969dc1e9
+0x00007f9b347881a0:   00007f9b280042d0 02ea37a60000013b
+0x00007f9b347881b0:   000000000000000e 00007f9b00000000
+0x00007f9b347881c0:   00007f9b903f2800 0000000000000000
+0x00007f9b347881d0:   0000000034788240 6e9f7e59f8194200
+0x00007f9b347881e0:   00007f9b971edcf8 00007f9b97f607e0
+0x00007f9b347881f0:   000000009033f110 00007f9b00000063
+0x00007f9b34788200:   0000000000000000 0000003000000018
+0x00007f9b34788210:   00007f9b34788350 00007f9b34788290 
+
+Instructions: (pc=0x00007f9b969d9906)
+0x00007f9b969d98e6:   00 48 89 bd a8 fe ff ff 64 48 8b 04 25 28 00 00
+0x00007f9b969d98f6:   00 48 89 45 c8 31 c0 48 85 d2 0f 84 12 02 00 00
+0x00007f9b969d9906:   48 8b 12 48 85 d2 0f 84 06 02 00 00 48 8d bd b8
+0x00007f9b969d9916:   fe ff ff 48 89 cb 49 89 f5 4c 89 ce 4d 89 c4 e8 
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x00007f9b903f2800 is a thread
+RCX=0x00007f9b90321f68 is an unknown value
+RDX=0x02ea37a60000013b is an unknown value
+RSP=0x00007f9b34788020 is pointing into the stack for thread: 0x00007f9b903f2800
+RBP=0x00007f9b34788190 is pointing into the stack for thread: 0x00007f9b903f2800
+RSI=0x00007f9b347881b0 is pointing into the stack for thread: 0x00007f9b903f2800
+RDI=0x00007f9b903f29e0 is an unknown value
+R8 =0x00007f9b347881e0 is pointing into the stack for thread: 0x00007f9b903f2800
+R9 =0x00007f9b903f2800 is a thread
+R10=0x00007f9b2c19dee8 is an unknown value
+R11=0x00007f9b815322c0 is at entry_point+32 in (nmethod*)0x00007f9b81532150
+R12=0x00007f9b347881e0 is pointing into the stack for thread: 0x00007f9b903f2800
+R13=0x00007f9b903f29e0 is an unknown value
+R14=0x00007f9b90321f68 is an unknown value
+R15=0x00007f9b903f2800 is a thread
+
+
+Stack: [0x00007f9b3469f000,0x00007f9b347a0000],  sp=0x00007f9b34788020,  free space=932k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x69e906]
+V  [libjvm.so+0x6a11e9]
+C  [libglass.so+0x155b3]  JNIEnv_::CallVoidMethod(_jobject*, _jmethodID*, ...)+0x93
+C  [libglass.so+0x1bf07]  WindowContextBase::process_key(_GdkEventKey*)+0x207
+C  [libglass.so+0x190f0]  WindowContextBase::im_filter_keypress(_GdkEventKey*)+0x210
+C  [libglass.so+0x17d94]
+C  [libgdk-x11-2.0.so.0+0x59d5e]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  com.sun.glass.ui.gtk.GtkSystemClipboard.mimesFromSystem()[Ljava/lang/String;+0
+j  com.sun.glass.ui.SystemClipboard.getMimeTypes()[Ljava/lang/String;+16
+j  com.sun.glass.ui.ClipboardAssistance.getMimeTypes()[Ljava/lang/String;+7
+j  com.sun.javafx.tk.quantum.QuantumClipboard.hasContent(Ljavafx/scene/input/DataFormat;)Z+69
+j  javafx.scene.input.Clipboard.hasContent(Ljavafx/scene/input/DataFormat;)Z+11
+j  javafx.scene.input.Clipboard.hasString()Z+4
+j  javafx.scene.control.TextInputControl.paste()V+5
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.paste()V+9
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.callAction(Ljava/lang/String;)V+75
+j  com.sun.javafx.scene.control.behavior.TextAreaBehavior.callAction(Ljava/lang/String;)V+452
+j  com.sun.javafx.scene.control.behavior.BehaviorBase.callActionForEvent(Ljavafx/scene/input/KeyEvent;)V+12
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.callActionForEvent(Ljavafx/scene/input/KeyEvent;)V+7
+j  com.sun.javafx.scene.control.behavior.BehaviorBase.lambda$new$0(Ljavafx/scene/input/KeyEvent;)V+9
+j  com.sun.javafx.scene.control.behavior.BehaviorBase$$Lambda$98.handle(Ljavafx/event/Event;)V+8
+J 1777 C1 com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Ljavafx/event/Event;)V (11 bytes) @ 0x00007f9b8155f984 [0x00007f9b8155f880+0x104]
+J 1696 C1 com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Ljavafx/event/Event;)V (57 bytes) @ 0x00007f9b8153f47c [0x00007f9b8153f240+0x23c]
+J 1605 C1 com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (23 bytes) @ 0x00007f9b81511d14 [0x00007f9b815116a0+0x674]
+J 1604 C1 com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (35 bytes) @ 0x00007f9b8151269c [0x00007f9b815124e0+0x1bc]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd97c [0x00007f9b814fd640+0x33c]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1784 C1 com.sun.javafx.event.EventUtil.fireEvent(Ljavafx/event/EventTarget;Ljavafx/event/Event;)Ljavafx/event/Event; (81 bytes) @ 0x00007f9b8156c294 [0x00007f9b8156b6c0+0xbd4]
+J 1783 C1 javafx.event.Event.fireEvent(Ljavafx/event/EventTarget;Ljavafx/event/Event;)V (35 bytes) @ 0x00007f9b8156276c [0x00007f9b815626a0+0xcc]
+j  javafx.scene.Scene$KeyHandler.process(Ljavafx/scene/input/KeyEvent;)V+23
+j  javafx.scene.Scene$KeyHandler.access$1800(Ljavafx/scene/Scene$KeyHandler;Ljavafx/scene/input/KeyEvent;)V+2
+j  javafx.scene.Scene.impl_processKeyEvent(Ljavafx/scene/input/KeyEvent;)V+28
+j  javafx.scene.Scene$ScenePeerListener.keyEvent(Ljavafx/scene/input/KeyEvent;)V+5
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run()Ljava/lang/Void;+357
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+J 1640  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object; (0 bytes) @ 0x00007f9b815255e3 [0x00007f9b81525580+0x63]
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleKeyEvent$1()Ljava/lang/Void;+11
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$238.get()Ljava/lang/Object;+4
+J 1780 C1 com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Ljava/util/function/Supplier;)Ljava/lang/Object; (49 bytes) @ 0x00007f9b8156326c [0x00007f9b81562d40+0x52c]
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler.handleKeyEvent(Lcom/sun/glass/ui/View;JII[CI)V+58
+j  com.sun.glass.ui.View.handleKeyEvent(JII[CI)V+20
+j  com.sun.glass.ui.View.notifyKey(II[CI)V+9
+v  ~StubRoutines::call_stub
+j  com.sun.glass.ui.gtk.GtkSystemClipboard.mimesFromSystem()[Ljava/lang/String;+0
+j  com.sun.glass.ui.SystemClipboard.getMimeTypes()[Ljava/lang/String;+16
+j  com.sun.glass.ui.ClipboardAssistance.getMimeTypes()[Ljava/lang/String;+7
+j  com.sun.javafx.tk.quantum.QuantumClipboard.hasContent(Ljavafx/scene/input/DataFormat;)Z+69
+j  javafx.scene.input.Clipboard.hasContent(Ljavafx/scene/input/DataFormat;)Z+11
+j  javafx.scene.input.Clipboard.hasString()Z+4
+j  javafx.scene.control.TextInputControl.paste()V+5
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.paste()V+9
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.callAction(Ljava/lang/String;)V+75
+j  com.sun.javafx.scene.control.behavior.TextAreaBehavior.callAction(Ljava/lang/String;)V+452
+j  com.sun.javafx.scene.control.behavior.BehaviorBase.callActionForEvent(Ljavafx/scene/input/KeyEvent;)V+12
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.callActionForEvent(Ljavafx/scene/input/KeyEvent;)V+7
+j  com.sun.javafx.scene.control.behavior.BehaviorBase.lambda$new$0(Ljavafx/scene/input/KeyEvent;)V+9
+j  com.sun.javafx.scene.control.behavior.BehaviorBase$$Lambda$98.handle(Ljavafx/event/Event;)V+8
+J 1777 C1 com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Ljavafx/event/Event;)V (11 bytes) @ 0x00007f9b8155f984 [0x00007f9b8155f880+0x104]
+J 1696 C1 com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Ljavafx/event/Event;)V (57 bytes) @ 0x00007f9b8153f47c [0x00007f9b8153f240+0x23c]
+J 1605 C1 com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (23 bytes) @ 0x00007f9b81511d14 [0x00007f9b815116a0+0x674]
+J 1604 C1 com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (35 bytes) @ 0x00007f9b8151269c [0x00007f9b815124e0+0x1bc]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd97c [0x00007f9b814fd640+0x33c]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1784 C1 com.sun.javafx.event.EventUtil.fireEvent(Ljavafx/event/EventTarget;Ljavafx/event/Event;)Ljavafx/event/Event; (81 bytes) @ 0x00007f9b8156c294 [0x00007f9b8156b6c0+0xbd4]
+J 1783 C1 javafx.event.Event.fireEvent(Ljavafx/event/EventTarget;Ljavafx/event/Event;)V (35 bytes) @ 0x00007f9b8156276c [0x00007f9b815626a0+0xcc]
+j  javafx.scene.Scene$KeyHandler.process(Ljavafx/scene/input/KeyEvent;)V+23
+j  javafx.scene.Scene$KeyHandler.access$1800(Ljavafx/scene/Scene$KeyHandler;Ljavafx/scene/input/KeyEvent;)V+2
+j  javafx.scene.Scene.impl_processKeyEvent(Ljavafx/scene/input/KeyEvent;)V+28
+j  javafx.scene.Scene$ScenePeerListener.keyEvent(Ljavafx/scene/input/KeyEvent;)V+5
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run()Ljava/lang/Void;+357
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+J 1640  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object; (0 bytes) @ 0x00007f9b815255e3 [0x00007f9b81525580+0x63]
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleKeyEvent$1()Ljava/lang/Void;+11
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$238.get()Ljava/lang/Object;+4
+J 1780 C1 com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Ljava/util/function/Supplier;)Ljava/lang/Object; (49 bytes) @ 0x00007f9b8156326c [0x00007f9b81562d40+0x52c]
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler.handleKeyEvent(Lcom/sun/glass/ui/View;JII[CI)V+58
+j  com.sun.glass.ui.View.handleKeyEvent(JII[CI)V+20
+j  com.sun.glass.ui.View.notifyKey(II[CI)V+9
+v  ~StubRoutines::call_stub
+j  com.sun.glass.ui.gtk.GtkSystemClipboard.mimesFromSystem()[Ljava/lang/String;+0
+j  com.sun.glass.ui.SystemClipboard.getMimeTypes()[Ljava/lang/String;+16
+j  com.sun.glass.ui.ClipboardAssistance.getMimeTypes()[Ljava/lang/String;+7
+j  com.sun.javafx.tk.quantum.QuantumClipboard.hasContent(Ljavafx/scene/input/DataFormat;)Z+69
+j  javafx.scene.input.Clipboard.hasContent(Ljavafx/scene/input/DataFormat;)Z+11
+j  javafx.scene.input.Clipboard.hasString()Z+4
+j  javafx.scene.control.TextInputControl.paste()V+5
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.paste()V+9
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.callAction(Ljava/lang/String;)V+75
+j  com.sun.javafx.scene.control.behavior.TextAreaBehavior.callAction(Ljava/lang/String;)V+452
+j  com.sun.javafx.scene.control.behavior.BehaviorBase.callActionForEvent(Ljavafx/scene/input/KeyEvent;)V+12
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.callActionForEvent(Ljavafx/scene/input/KeyEvent;)V+7
+j  com.sun.javafx.scene.control.behavior.BehaviorBase.lambda$new$0(Ljavafx/scene/input/KeyEvent;)V+9
+j  com.sun.javafx.scene.control.behavior.BehaviorBase$$Lambda$98.handle(Ljavafx/event/Event;)V+8
+J 1777 C1 com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Ljavafx/event/Event;)V (11 bytes) @ 0x00007f9b8155f984 [0x00007f9b8155f880+0x104]
+J 1696 C1 com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Ljavafx/event/Event;)V (57 bytes) @ 0x00007f9b8153f47c [0x00007f9b8153f240+0x23c]
+J 1605 C1 com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (23 bytes) @ 0x00007f9b81511d14 [0x00007f9b815116a0+0x674]
+J 1604 C1 com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (35 bytes) @ 0x00007f9b8151269c [0x00007f9b815124e0+0x1bc]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd97c [0x00007f9b814fd640+0x33c]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1784 C1 com.sun.javafx.event.EventUtil.fireEvent(Ljavafx/event/EventTarget;Ljavafx/event/Event;)Ljavafx/event/Event; (81 bytes) @ 0x00007f9b8156c294 [0x00007f9b8156b6c0+0xbd4]
+J 1783 C1 javafx.event.Event.fireEvent(Ljavafx/event/EventTarget;Ljavafx/event/Event;)V (35 bytes) @ 0x00007f9b8156276c [0x00007f9b815626a0+0xcc]
+j  javafx.scene.Scene$KeyHandler.process(Ljavafx/scene/input/KeyEvent;)V+23
+j  javafx.scene.Scene$KeyHandler.access$1800(Ljavafx/scene/Scene$KeyHandler;Ljavafx/scene/input/KeyEvent;)V+2
+j  javafx.scene.Scene.impl_processKeyEvent(Ljavafx/scene/input/KeyEvent;)V+28
+j  javafx.scene.Scene$ScenePeerListener.keyEvent(Ljavafx/scene/input/KeyEvent;)V+5
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run()Ljava/lang/Void;+357
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+J 1640  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object; (0 bytes) @ 0x00007f9b815255e3 [0x00007f9b81525580+0x63]
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleKeyEvent$1()Ljava/lang/Void;+11
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$238.get()Ljava/lang/Object;+4
+J 1780 C1 com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Ljava/util/function/Supplier;)Ljava/lang/Object; (49 bytes) @ 0x00007f9b8156326c [0x00007f9b81562d40+0x52c]
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler.handleKeyEvent(Lcom/sun/glass/ui/View;JII[CI)V+58
+j  com.sun.glass.ui.View.handleKeyEvent(JII[CI)V+20
+j  com.sun.glass.ui.View.notifyKey(II[CI)V+9
+v  ~StubRoutines::call_stub
+j  com.sun.glass.ui.gtk.GtkSystemClipboard.mimesFromSystem()[Ljava/lang/String;+0
+j  com.sun.glass.ui.SystemClipboard.getMimeTypes()[Ljava/lang/String;+16
+j  com.sun.glass.ui.ClipboardAssistance.getMimeTypes()[Ljava/lang/String;+7
+j  com.sun.javafx.tk.quantum.QuantumClipboard.hasContent(Ljavafx/scene/input/DataFormat;)Z+69
+j  javafx.scene.input.Clipboard.hasContent(Ljavafx/scene/input/DataFormat;)Z+11
+j  javafx.scene.input.Clipboard.hasString()Z+4
+j  javafx.scene.control.TextInputControl.paste()V+5
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.paste()V+9
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.callAction(Ljava/lang/String;)V+75
+j  com.sun.javafx.scene.control.behavior.TextAreaBehavior.callAction(Ljava/lang/String;)V+452
+j  com.sun.javafx.scene.control.behavior.BehaviorBase.callActionForEvent(Ljavafx/scene/input/KeyEvent;)V+12
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.callActionForEvent(Ljavafx/scene/input/KeyEvent;)V+7
+j  com.sun.javafx.scene.control.behavior.BehaviorBase.lambda$new$0(Ljavafx/scene/input/KeyEvent;)V+9
+j  com.sun.javafx.scene.control.behavior.BehaviorBase$$Lambda$98.handle(Ljavafx/event/Event;)V+8
+J 1777 C1 com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Ljavafx/event/Event;)V (11 bytes) @ 0x00007f9b8155f984 [0x00007f9b8155f880+0x104]
+J 1696 C1 com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Ljavafx/event/Event;)V (57 bytes) @ 0x00007f9b8153f47c [0x00007f9b8153f240+0x23c]
+J 1605 C1 com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (23 bytes) @ 0x00007f9b81511d14 [0x00007f9b815116a0+0x674]
+J 1604 C1 com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (35 bytes) @ 0x00007f9b8151269c [0x00007f9b815124e0+0x1bc]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd97c [0x00007f9b814fd640+0x33c]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1784 C1 com.sun.javafx.event.EventUtil.fireEvent(Ljavafx/event/EventTarget;Ljavafx/event/Event;)Ljavafx/event/Event; (81 bytes) @ 0x00007f9b8156c294 [0x00007f9b8156b6c0+0xbd4]
+J 1783 C1 javafx.event.Event.fireEvent(Ljavafx/event/EventTarget;Ljavafx/event/Event;)V (35 bytes) @ 0x00007f9b8156276c [0x00007f9b815626a0+0xcc]
+j  javafx.scene.Scene$KeyHandler.process(Ljavafx/scene/input/KeyEvent;)V+23
+j  javafx.scene.Scene$KeyHandler.access$1800(Ljavafx/scene/Scene$KeyHandler;Ljavafx/scene/input/KeyEvent;)V+2
+j  javafx.scene.Scene.impl_processKeyEvent(Ljavafx/scene/input/KeyEvent;)V+28
+j  javafx.scene.Scene$ScenePeerListener.keyEvent(Ljavafx/scene/input/KeyEvent;)V+5
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run()Ljava/lang/Void;+357
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+J 1640  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object; (0 bytes) @ 0x00007f9b815255e3 [0x00007f9b81525580+0x63]
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleKeyEvent$1()Ljava/lang/Void;+11
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$238.get()Ljava/lang/Object;+4
+J 1780 C1 com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Ljava/util/function/Supplier;)Ljava/lang/Object; (49 bytes) @ 0x00007f9b8156326c [0x00007f9b81562d40+0x52c]
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler.handleKeyEvent(Lcom/sun/glass/ui/View;JII[CI)V+58
+j  com.sun.glass.ui.View.handleKeyEvent(JII[CI)V+20
+j  com.sun.glass.ui.View.notifyKey(II[CI)V+9
+v  ~StubRoutines::call_stub
+j  com.sun.glass.ui.gtk.GtkSystemClipboard.mimesFromSystem()[Ljava/lang/String;+0
+j  com.sun.glass.ui.SystemClipboard.getMimeTypes()[Ljava/lang/String;+16
+j  com.sun.glass.ui.ClipboardAssistance.getMimeTypes()[Ljava/lang/String;+7
+j  com.sun.javafx.tk.quantum.QuantumClipboard.hasContent(Ljavafx/scene/input/DataFormat;)Z+69
+j  javafx.scene.input.Clipboard.hasContent(Ljavafx/scene/input/DataFormat;)Z+11
+j  javafx.scene.input.Clipboard.hasString()Z+4
+j  javafx.scene.control.TextInputControl.paste()V+5
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.paste()V+9
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.callAction(Ljava/lang/String;)V+75
+j  com.sun.javafx.scene.control.behavior.TextAreaBehavior.callAction(Ljava/lang/String;)V+452
+j  com.sun.javafx.scene.control.behavior.BehaviorBase.callActionForEvent(Ljavafx/scene/input/KeyEvent;)V+12
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.callActionForEvent(Ljavafx/scene/input/KeyEvent;)V+7
+j  com.sun.javafx.scene.control.behavior.BehaviorBase.lambda$new$0(Ljavafx/scene/input/KeyEvent;)V+9
+j  com.sun.javafx.scene.control.behavior.BehaviorBase$$Lambda$98.handle(Ljavafx/event/Event;)V+8
+J 1777 C1 com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Ljavafx/event/Event;)V (11 bytes) @ 0x00007f9b8155f984 [0x00007f9b8155f880+0x104]
+J 1696 C1 com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Ljavafx/event/Event;)V (57 bytes) @ 0x00007f9b8153f47c [0x00007f9b8153f240+0x23c]
+J 1605 C1 com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (23 bytes) @ 0x00007f9b81511d14 [0x00007f9b815116a0+0x674]
+J 1604 C1 com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (35 bytes) @ 0x00007f9b8151269c [0x00007f9b815124e0+0x1bc]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd97c [0x00007f9b814fd640+0x33c]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1784 C1 com.sun.javafx.event.EventUtil.fireEvent(Ljavafx/event/EventTarget;Ljavafx/event/Event;)Ljavafx/event/Event; (81 bytes) @ 0x00007f9b8156c294 [0x00007f9b8156b6c0+0xbd4]
+J 1783 C1 javafx.event.Event.fireEvent(Ljavafx/event/EventTarget;Ljavafx/event/Event;)V (35 bytes) @ 0x00007f9b8156276c [0x00007f9b815626a0+0xcc]
+j  javafx.scene.Scene$KeyHandler.process(Ljavafx/scene/input/KeyEvent;)V+23
+j  javafx.scene.Scene$KeyHandler.access$1800(Ljavafx/scene/Scene$KeyHandler;Ljavafx/scene/input/KeyEvent;)V+2
+j  javafx.scene.Scene.impl_processKeyEvent(Ljavafx/scene/input/KeyEvent;)V+28
+j  javafx.scene.Scene$ScenePeerListener.keyEvent(Ljavafx/scene/input/KeyEvent;)V+5
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run()Ljava/lang/Void;+357
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+J 1640  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object; (0 bytes) @ 0x00007f9b815255e3 [0x00007f9b81525580+0x63]
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleKeyEvent$1()Ljava/lang/Void;+11
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$238.get()Ljava/lang/Object;+4
+J 1780 C1 com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Ljava/util/function/Supplier;)Ljava/lang/Object; (49 bytes) @ 0x00007f9b8156326c [0x00007f9b81562d40+0x52c]
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler.handleKeyEvent(Lcom/sun/glass/ui/View;JII[CI)V+58
+j  com.sun.glass.ui.View.handleKeyEvent(JII[CI)V+20
+j  com.sun.glass.ui.View.notifyKey(II[CI)V+9
+v  ~StubRoutines::call_stub
+j  com.sun.glass.ui.gtk.GtkSystemClipboard.mimesFromSystem()[Ljava/lang/String;+0
+j  com.sun.glass.ui.SystemClipboard.getMimeTypes()[Ljava/lang/String;+16
+j  com.sun.glass.ui.ClipboardAssistance.getMimeTypes()[Ljava/lang/String;+7
+j  com.sun.javafx.tk.quantum.QuantumClipboard.hasContent(Ljavafx/scene/input/DataFormat;)Z+69
+j  javafx.scene.input.Clipboard.hasContent(Ljavafx/scene/input/DataFormat;)Z+11
+j  javafx.scene.input.Clipboard.hasString()Z+4
+j  javafx.scene.control.TextInputControl.paste()V+5
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.paste()V+9
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.callAction(Ljava/lang/String;)V+75
+j  com.sun.javafx.scene.control.behavior.TextAreaBehavior.callAction(Ljava/lang/String;)V+452
+j  com.sun.javafx.scene.control.behavior.BehaviorBase.callActionForEvent(Ljavafx/scene/input/KeyEvent;)V+12
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.callActionForEvent(Ljavafx/scene/input/KeyEvent;)V+7
+j  com.sun.javafx.scene.control.behavior.BehaviorBase.lambda$new$0(Ljavafx/scene/input/KeyEvent;)V+9
+j  com.sun.javafx.scene.control.behavior.BehaviorBase$$Lambda$98.handle(Ljavafx/event/Event;)V+8
+J 1777 C1 com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Ljavafx/event/Event;)V (11 bytes) @ 0x00007f9b8155f984 [0x00007f9b8155f880+0x104]
+J 1696 C1 com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Ljavafx/event/Event;)V (57 bytes) @ 0x00007f9b8153f47c [0x00007f9b8153f240+0x23c]
+J 1605 C1 com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (23 bytes) @ 0x00007f9b81511d14 [0x00007f9b815116a0+0x674]
+J 1604 C1 com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (35 bytes) @ 0x00007f9b8151269c [0x00007f9b815124e0+0x1bc]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd97c [0x00007f9b814fd640+0x33c]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1784 C1 com.sun.javafx.event.EventUtil.fireEvent(Ljavafx/event/EventTarget;Ljavafx/event/Event;)Ljavafx/event/Event; (81 bytes) @ 0x00007f9b8156c294 [0x00007f9b8156b6c0+0xbd4]
+J 1783 C1 javafx.event.Event.fireEvent(Ljavafx/event/EventTarget;Ljavafx/event/Event;)V (35 bytes) @ 0x00007f9b8156276c [0x00007f9b815626a0+0xcc]
+j  javafx.scene.Scene$KeyHandler.process(Ljavafx/scene/input/KeyEvent;)V+23
+j  javafx.scene.Scene$KeyHandler.access$1800(Ljavafx/scene/Scene$KeyHandler;Ljavafx/scene/input/KeyEvent;)V+2
+j  javafx.scene.Scene.impl_processKeyEvent(Ljavafx/scene/input/KeyEvent;)V+28
+j  javafx.scene.Scene$ScenePeerListener.keyEvent(Ljavafx/scene/input/KeyEvent;)V+5
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run()Ljava/lang/Void;+357
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+J 1640  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object; (0 bytes) @ 0x00007f9b815255e3 [0x00007f9b81525580+0x63]
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleKeyEvent$1()Ljava/lang/Void;+11
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$238.get()Ljava/lang/Object;+4
+J 1780 C1 com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Ljava/util/function/Supplier;)Ljava/lang/Object; (49 bytes) @ 0x00007f9b8156326c [0x00007f9b81562d40+0x52c]
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler.handleKeyEvent(Lcom/sun/glass/ui/View;JII[CI)V+58
+j  com.sun.glass.ui.View.handleKeyEvent(JII[CI)V+20
+j  com.sun.glass.ui.View.notifyKey(II[CI)V+9
+v  ~StubRoutines::call_stub
+j  com.sun.glass.ui.gtk.GtkSystemClipboard.mimesFromSystem()[Ljava/lang/String;+0
+j  com.sun.glass.ui.SystemClipboard.getMimeTypes()[Ljava/lang/String;+16
+j  com.sun.glass.ui.ClipboardAssistance.getMimeTypes()[Ljava/lang/String;+7
+j  com.sun.javafx.tk.quantum.QuantumClipboard.hasContent(Ljavafx/scene/input/DataFormat;)Z+69
+j  javafx.scene.input.Clipboard.hasContent(Ljavafx/scene/input/DataFormat;)Z+11
+j  javafx.scene.input.Clipboard.hasString()Z+4
+j  javafx.scene.control.TextInputControl.paste()V+5
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.paste()V+9
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.callAction(Ljava/lang/String;)V+75
+j  com.sun.javafx.scene.control.behavior.TextAreaBehavior.callAction(Ljava/lang/String;)V+452
+j  com.sun.javafx.scene.control.behavior.BehaviorBase.callActionForEvent(Ljavafx/scene/input/KeyEvent;)V+12
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.callActionForEvent(Ljavafx/scene/input/KeyEvent;)V+7
+j  com.sun.javafx.scene.control.behavior.BehaviorBase.lambda$new$0(Ljavafx/scene/input/KeyEvent;)V+9
+j  com.sun.javafx.scene.control.behavior.BehaviorBase$$Lambda$98.handle(Ljavafx/event/Event;)V+8
+J 1777 C1 com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Ljavafx/event/Event;)V (11 bytes) @ 0x00007f9b8155f984 [0x00007f9b8155f880+0x104]
+J 1696 C1 com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Ljavafx/event/Event;)V (57 bytes) @ 0x00007f9b8153f47c [0x00007f9b8153f240+0x23c]
+J 1605 C1 com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (23 bytes) @ 0x00007f9b81511d14 [0x00007f9b815116a0+0x674]
+J 1604 C1 com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (35 bytes) @ 0x00007f9b8151269c [0x00007f9b815124e0+0x1bc]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd97c [0x00007f9b814fd640+0x33c]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1784 C1 com.sun.javafx.event.EventUtil.fireEvent(Ljavafx/event/EventTarget;Ljavafx/event/Event;)Ljavafx/event/Event; (81 bytes) @ 0x00007f9b8156c294 [0x00007f9b8156b6c0+0xbd4]
+J 1783 C1 javafx.event.Event.fireEvent(Ljavafx/event/EventTarget;Ljavafx/event/Event;)V (35 bytes) @ 0x00007f9b8156276c [0x00007f9b815626a0+0xcc]
+j  javafx.scene.Scene$KeyHandler.process(Ljavafx/scene/input/KeyEvent;)V+23
+j  javafx.scene.Scene$KeyHandler.access$1800(Ljavafx/scene/Scene$KeyHandler;Ljavafx/scene/input/KeyEvent;)V+2
+j  javafx.scene.Scene.impl_processKeyEvent(Ljavafx/scene/input/KeyEvent;)V+28
+j  javafx.scene.Scene$ScenePeerListener.keyEvent(Ljavafx/scene/input/KeyEvent;)V+5
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run()Ljava/lang/Void;+357
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+J 1640  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object; (0 bytes) @ 0x00007f9b815255e3 [0x00007f9b81525580+0x63]
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleKeyEvent$1()Ljava/lang/Void;+11
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$238.get()Ljava/lang/Object;+4
+J 1780 C1 com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Ljava/util/function/Supplier;)Ljava/lang/Object; (49 bytes) @ 0x00007f9b8156326c [0x00007f9b81562d40+0x52c]
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler.handleKeyEvent(Lcom/sun/glass/ui/View;JII[CI)V+58
+j  com.sun.glass.ui.View.handleKeyEvent(JII[CI)V+20
+j  com.sun.glass.ui.View.notifyKey(II[CI)V+9
+v  ~StubRoutines::call_stub
+j  com.sun.glass.ui.gtk.GtkSystemClipboard.mimesFromSystem()[Ljava/lang/String;+0
+j  com.sun.glass.ui.SystemClipboard.getMimeTypes()[Ljava/lang/String;+16
+j  com.sun.glass.ui.ClipboardAssistance.getMimeTypes()[Ljava/lang/String;+7
+j  com.sun.javafx.tk.quantum.QuantumClipboard.hasContent(Ljavafx/scene/input/DataFormat;)Z+69
+j  javafx.scene.input.Clipboard.hasContent(Ljavafx/scene/input/DataFormat;)Z+11
+j  javafx.scene.input.Clipboard.hasString()Z+4
+j  javafx.scene.control.TextInputControl.paste()V+5
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.paste()V+9
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.callAction(Ljava/lang/String;)V+75
+j  com.sun.javafx.scene.control.behavior.TextAreaBehavior.callAction(Ljava/lang/String;)V+452
+j  com.sun.javafx.scene.control.behavior.BehaviorBase.callActionForEvent(Ljavafx/scene/input/KeyEvent;)V+12
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.callActionForEvent(Ljavafx/scene/input/KeyEvent;)V+7
+j  com.sun.javafx.scene.control.behavior.BehaviorBase.lambda$new$0(Ljavafx/scene/input/KeyEvent;)V+9
+j  com.sun.javafx.scene.control.behavior.BehaviorBase$$Lambda$98.handle(Ljavafx/event/Event;)V+8
+j  com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Ljavafx/event/Event;)V+5
+J 1696 C1 com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Ljavafx/event/Event;)V (57 bytes) @ 0x00007f9b8153f47c [0x00007f9b8153f240+0x23c]
+J 1605 C1 com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (23 bytes) @ 0x00007f9b81511d14 [0x00007f9b815116a0+0x674]
+J 1604 C1 com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (35 bytes) @ 0x00007f9b8151269c [0x00007f9b815124e0+0x1bc]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd97c [0x00007f9b814fd640+0x33c]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+j  com.sun.javafx.event.EventUtil.fireEventImpl(Ljavafx/event/EventDispatchChain;Ljavafx/event/EventTarget;Ljavafx/event/Event;)Ljavafx/event/Event;+10
+j  com.sun.javafx.event.EventUtil.fireEvent(Ljavafx/event/EventTarget;Ljavafx/event/Event;)Ljavafx/event/Event;+37
+j  javafx.event.Event.fireEvent(Ljavafx/event/EventTarget;Ljavafx/event/Event;)V+30
+j  javafx.scene.Scene$KeyHandler.process(Ljavafx/scene/input/KeyEvent;)V+23
+j  javafx.scene.Scene$KeyHandler.access$1800(Ljavafx/scene/Scene$KeyHandler;Ljavafx/scene/input/KeyEvent;)V+2
+j  javafx.scene.Scene.impl_processKeyEvent(Ljavafx/scene/input/KeyEvent;)V+28
+j  javafx.scene.Scene$ScenePeerListener.keyEvent(Ljavafx/scene/input/KeyEvent;)V+5
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run()Ljava/lang/Void;+357
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+J 1640  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object; (0 bytes) @ 0x00007f9b815255e3 [0x00007f9b81525580+0x63]
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleKeyEvent$1()Ljava/lang/Void;+11
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$238.get()Ljava/lang/Object;+4
+j  com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Ljava/util/function/Supplier;)Ljava/lang/Object;+18
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler.handleKeyEvent(Lcom/sun/glass/ui/View;JII[CI)V+58
+j  com.sun.glass.ui.View.handleKeyEvent(JII[CI)V+20
+j  com.sun.glass.ui.View.notifyKey(II[CI)V+9
+v  ~StubRoutines::call_stub
+j  com.sun.glass.ui.gtk.GtkSystemClipboard.mimesFromSystem()[Ljava/lang/String;+0
+j  com.sun.glass.ui.SystemClipboard.getMimeTypes()[Ljava/lang/String;+16
+j  com.sun.glass.ui.ClipboardAssistance.getMimeTypes()[Ljava/lang/String;+7
+j  com.sun.javafx.tk.quantum.QuantumClipboard.hasContent(Ljavafx/scene/input/DataFormat;)Z+69
+j  javafx.scene.input.Clipboard.hasContent(Ljavafx/scene/input/DataFormat;)Z+11
+j  javafx.scene.input.Clipboard.hasString()Z+4
+j  javafx.scene.control.TextInputControl.paste()V+5
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.paste()V+9
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.callAction(Ljava/lang/String;)V+75
+j  com.sun.javafx.scene.control.behavior.TextAreaBehavior.callAction(Ljava/lang/String;)V+452
+j  com.sun.javafx.scene.control.behavior.BehaviorBase.callActionForEvent(Ljavafx/scene/input/KeyEvent;)V+12
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.callActionForEvent(Ljavafx/scene/input/KeyEvent;)V+7
+j  com.sun.javafx.scene.control.behavior.BehaviorBase.lambda$new$0(Ljavafx/scene/input/KeyEvent;)V+9
+j  com.sun.javafx.scene.control.behavior.BehaviorBase$$Lambda$98.handle(Ljavafx/event/Event;)V+8
+j  com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Ljavafx/event/Event;)V+5
+j  com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Ljavafx/event/Event;)V+28
+J 1605 C1 com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (23 bytes) @ 0x00007f9b81511d14 [0x00007f9b815116a0+0x674]
+J 1604 C1 com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (35 bytes) @ 0x00007f9b8151269c [0x00007f9b815124e0+0x1bc]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd97c [0x00007f9b814fd640+0x33c]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+j  com.sun.javafx.event.EventUtil.fireEventImpl(Ljavafx/event/EventDispatchChain;Ljavafx/event/EventTarget;Ljavafx/event/Event;)Ljavafx/event/Event;+10
+j  com.sun.javafx.event.EventUtil.fireEvent(Ljavafx/event/EventTarget;Ljavafx/event/Event;)Ljavafx/event/Event;+37
+j  javafx.event.Event.fireEvent(Ljavafx/event/EventTarget;Ljavafx/event/Event;)V+30
+j  javafx.scene.Scene$KeyHandler.process(Ljavafx/scene/input/KeyEvent;)V+23
+j  javafx.scene.Scene$KeyHandler.access$1800(Ljavafx/scene/Scene$KeyHandler;Ljavafx/scene/input/KeyEvent;)V+2
+j  javafx.scene.Scene.impl_processKeyEvent(Ljavafx/scene/input/KeyEvent;)V+28
+j  javafx.scene.Scene$ScenePeerListener.keyEvent(Ljavafx/scene/input/KeyEvent;)V+5
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run()Ljava/lang/Void;+357
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+J 1640  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object; (0 bytes) @ 0x00007f9b815255e3 [0x00007f9b81525580+0x63]
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleKeyEvent$1()Ljava/lang/Void;+11
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$238.get()Ljava/lang/Object;+4
+j  com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Ljava/util/function/Supplier;)Ljava/lang/Object;+18
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler.handleKeyEvent(Lcom/sun/glass/ui/View;JII[CI)V+58
+j  com.sun.glass.ui.View.handleKeyEvent(JII[CI)V+20
+j  com.sun.glass.ui.View.notifyKey(II[CI)V+9
+v  ~StubRoutines::call_stub
+j  com.sun.glass.ui.gtk.GtkSystemClipboard.mimesFromSystem()[Ljava/lang/String;+0
+j  com.sun.glass.ui.SystemClipboard.getMimeTypes()[Ljava/lang/String;+16
+j  com.sun.glass.ui.ClipboardAssistance.getMimeTypes()[Ljava/lang/String;+7
+j  com.sun.javafx.tk.quantum.QuantumClipboard.hasContent(Ljavafx/scene/input/DataFormat;)Z+69
+j  javafx.scene.input.Clipboard.hasContent(Ljavafx/scene/input/DataFormat;)Z+11
+j  javafx.scene.input.Clipboard.hasString()Z+4
+j  javafx.scene.control.TextInputControl.paste()V+5
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.paste()V+9
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.callAction(Ljava/lang/String;)V+75
+j  com.sun.javafx.scene.control.behavior.TextAreaBehavior.callAction(Ljava/lang/String;)V+452
+j  com.sun.javafx.scene.control.behavior.BehaviorBase.callActionForEvent(Ljavafx/scene/input/KeyEvent;)V+12
+j  com.sun.javafx.scene.control.behavior.TextInputControlBehavior.callActionForEvent(Ljavafx/scene/input/KeyEvent;)V+7
+j  com.sun.javafx.scene.control.behavior.BehaviorBase.lambda$new$0(Ljavafx/scene/input/KeyEvent;)V+9
+j  com.sun.javafx.scene.control.behavior.BehaviorBase$$Lambda$98.handle(Ljavafx/event/Event;)V+8
+j  com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Ljavafx/event/Event;)V+5
+j  com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Ljavafx/event/Event;)V+28
+J 1605 C1 com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (23 bytes) @ 0x00007f9b81511d14 [0x00007f9b815116a0+0x674]
+J 1604 C1 com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (35 bytes) @ 0x00007f9b8151269c [0x00007f9b815124e0+0x1bc]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd97c [0x00007f9b814fd640+0x33c]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+J 1570 C1 com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Ljavafx/event/Event;Ljavafx/event/EventDispatchChain;)Ljavafx/event/Event; (44 bytes) @ 0x00007f9b814fd894 [0x00007f9b814fd640+0x254]
+J 1549 C1 com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Ljavafx/event/Event;)Ljavafx/event/Event; (101 bytes) @ 0x00007f9b814ef644 [0x00007f9b814ef4a0+0x1a4]
+j  com.sun.javafx.event.EventUtil.fireEventImpl(Ljavafx/event/EventDispatchChain;Ljavafx/event/EventTarget;Ljavafx/event/Event;)Ljavafx/event/Event;+10
+j  com.sun.javafx.event.EventUtil.fireEvent(Ljavafx/event/EventTarget;Ljavafx/event/Event;)Ljavafx/event/Event;+46
+j  javafx.event.Event.fireEvent(Ljavafx/event/EventTarget;Ljavafx/event/Event;)V+30
+j  javafx.scene.Scene$KeyHandler.process(Ljavafx/scene/input/KeyEvent;)V+23
+j  javafx.scene.Scene$KeyHandler.access$1800(Ljavafx/scene/Scene$KeyHandler;Ljavafx/scene/input/KeyEvent;)V+2
+j  javafx.scene.Scene.impl_processKeyEvent(Ljavafx/scene/input/KeyEvent;)V+28
+j  javafx.scene.Scene$ScenePeerListener.keyEvent(Ljavafx/scene/input/KeyEvent;)V+5
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run()Ljava/lang/Void;+357
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+J 1640  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object; (0 bytes) @ 0x00007f9b815255e3 [0x00007f9b81525580+0x63]
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleKeyEvent$1()Ljava/lang/Void;+11
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler$$Lambda$238.get()Ljava/lang/Object;+4
+j  com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Ljava/util/function/Supplier;)Ljava/lang/Object;+18
+j  com.sun.javafx.tk.quantum.GlassViewEventHandler.handleKeyEvent(Lcom/sun/glass/ui/View;JII[CI)V+58
+j  com.sun.glass.ui.View.handleKeyEvent(JII[CI)V+20
+j  com.sun.glass.ui.View.notifyKey(II[CI)V+9
+v  ~StubRoutines::call_stub
+j  com.sun.glass.ui.gtk.GtkApplication._runLoop(Ljava/lang/Runnable;Z)V+0
+j  com.sun.glass.ui.gtk.GtkApplication.lambda$null$5(Ljava/lang/Runnable;Z)V+7
+j  com.sun.glass.ui.gtk.GtkApplication$$Lambda$41.run()V+12
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f9b9030c000 JavaThread "DestroyJavaVM" [_thread_blocked, id=31873, stack(0x00007f9b97fb6000,0x00007f9b980b6000)]
+  0x00007f9b2c2d7000 JavaThread "Prism Font Disposer" daemon [_thread_blocked, id=31912, stack(0x00007f9b26ef4000,0x00007f9b26ff5000)]
+  0x00007f9b2c090800 JavaThread "Timer-0" [_thread_blocked, id=31908, stack(0x00007f9b3435c000,0x00007f9b3445d000)]
+=>0x00007f9b903f2800 JavaThread "JavaFX Application Thread" [_thread_in_vm, id=31905, stack(0x00007f9b3469f000,0x00007f9b347a0000)]
+  0x00007f9b903ef000 JavaThread "Thread-1" daemon [_thread_blocked, id=31904, stack(0x00007f9b347a0000,0x00007f9b348a1000)]
+  0x00007f9b90205800 JavaThread "Service Thread" daemon [_thread_blocked, id=31900, stack(0x00007f9b78fef000,0x00007f9b790f0000)]
+  0x00007f9b90202800 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=31899, stack(0x00007f9b790f1000,0x00007f9b791f1000)]
+  0x00007f9b90200000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=31898, stack(0x00007f9b7940a000,0x00007f9b7950a000)]
+  0x00007f9b901fe800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=31897, stack(0x00007f9b7950b000,0x00007f9b7960b000)]
+  0x00007f9b901fc800 JavaThread "Monitor Ctrl-Break" daemon [_thread_in_native, id=31896, stack(0x00007f9b7960b000,0x00007f9b7970c000)]
+  0x00007f9b9017f800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=31893, stack(0x00007f9b7970c000,0x00007f9b7980d000)]
+  0x00007f9b9014c800 JavaThread "Finalizer" daemon [_thread_blocked, id=31887, stack(0x00007f9b79ad9000,0x00007f9b79bda000)]
+  0x00007f9b90148000 JavaThread "Reference Handler" daemon [_thread_blocked, id=31885, stack(0x00007f9b79bda000,0x00007f9b79cdb000)]
+
+Other Threads:
+  0x00007f9b90140000 VMThread [stack: 0x00007f9b79cdc000,0x00007f9b79ddc000] [id=31884]
+  0x00007f9b90208000 WatcherThread [stack: 0x00007f9b78eef000,0x00007f9b78fef000] [id=31901]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 18432K, used 13786K [0x00000000ebf00000, 0x00000000ee300000, 0x0000000100000000)
+  eden space 15872K, 70% used [0x00000000ebf00000,0x00000000ec9faa20,0x00000000ece80000)
+  from space 2560K, 99% used [0x00000000ece80000,0x00000000ed0fc040,0x00000000ed100000)
+  to   space 2560K, 0% used [0x00000000ee080000,0x00000000ee080000,0x00000000ee300000)
+ ParOldGen       total 42496K, used 8697K [0x00000000c3c00000, 0x00000000c6580000, 0x00000000ebf00000)
+  object space 42496K, 20% used [0x00000000c3c00000,0x00000000c447e738,0x00000000c6580000)
+ Metaspace       used 18066K, capacity 19094K, committed 19328K, reserved 1067008K
+  class space    used 2454K, capacity 2665K, committed 2688K, reserved 1048576K
+
+Card table byte_map: [0x00007f9b94d96000,0x00007f9b94f79000] byte_map_base: 0x00007f9b94778000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f9b972b2140
+ Begin Bits: [0x00007f9b7a1e0000, 0x00007f9b7b0f0000)
+ End Bits:   [0x00007f9b7b0f0000, 0x00007f9b7c000000)
+
+Polling page: 0x00007f9b980f6000
+
+CodeCache: size=245760Kb used=6271Kb max_used=6278Kb free=239488Kb
+ bounds [0x00007f9b81000000, 0x00007f9b81630000, 0x00007f9b90000000]
+ total_blobs=2686 nmethods=2052 adapters=547
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 16,667 Thread 0x00007f9b90202800 2048       3       com.sun.javafx.util.Logging::getInputLogger (18 bytes)
+Event: 16,668 Thread 0x00007f9b90202800 nmethod 2048 0x00007f9b81616d90 code [0x00007f9b81616f00, 0x00007f9b816170e8]
+Event: 16,673 Thread 0x00007f9b90202800 2049       3       com.sun.javafx.geom.transform.Affine3D::deltaTransform (126 bytes)
+Event: 16,674 Thread 0x00007f9b90202800 nmethod 2049 0x00007f9b81616610 code [0x00007f9b816167a0, 0x00007f9b81616b88]
+Event: 20,764 Thread 0x00007f9b90200000 2050       4       java.lang.ref.Reference::<init> (25 bytes)
+Event: 20,766 Thread 0x00007f9b90200000 nmethod 2050 0x00007f9b815e7a10 code [0x00007f9b815e7b60, 0x00007f9b815e7c18]
+Event: 20,769 Thread 0x00007f9b90202800 2051       3       com.sun.glass.ui.Application::invokeLater (13 bytes)
+Event: 20,770 Thread 0x00007f9b90202800 nmethod 2051 0x00007f9b81616110 code [0x00007f9b81616280, 0x00007f9b81616528]
+Event: 20,771 Thread 0x00007f9b901fe800 2052       4       jdk.internal.org.objectweb.asm.Item::isEqualTo (354 bytes)
+Event: 20,778 Thread 0x00007f9b901fe800 nmethod 2052 0x00007f9b81623490 code [0x00007f9b81623780, 0x00007f9b81624218]
+
+GC Heap History (6 events):
+Event: 0,848 GC heap before
+{Heap before GC invocations=1 (full 0):
+ PSYoungGen      total 18432K, used 15869K [0x00000000ebf00000, 0x00000000ed380000, 0x0000000100000000)
+  eden space 15872K, 99% used [0x00000000ebf00000,0x00000000ece7f500,0x00000000ece80000)
+  from space 2560K, 0% used [0x00000000ed100000,0x00000000ed100000,0x00000000ed380000)
+  to   space 2560K, 0% used [0x00000000ece80000,0x00000000ece80000,0x00000000ed100000)
+ ParOldGen       total 42496K, used 0K [0x00000000c3c00000, 0x00000000c6580000, 0x00000000ebf00000)
+  object space 42496K, 0% used [0x00000000c3c00000,0x00000000c3c00000,0x00000000c6580000)
+ Metaspace       used 7906K, capacity 8194K, committed 8448K, reserved 1056768K
+  class space    used 897K, capacity 1003K, committed 1024K, reserved 1048576K
+Event: 0,852 GC heap after
+Heap after GC invocations=1 (full 0):
+ PSYoungGen      total 18432K, used 2546K [0x00000000ebf00000, 0x00000000ed380000, 0x0000000100000000)
+  eden space 15872K, 0% used [0x00000000ebf00000,0x00000000ebf00000,0x00000000ece80000)
+  from space 2560K, 99% used [0x00000000ece80000,0x00000000ed0fcac0,0x00000000ed100000)
+  to   space 2560K, 0% used [0x00000000ed100000,0x00000000ed100000,0x00000000ed380000)
+ ParOldGen       total 42496K, used 1042K [0x00000000c3c00000, 0x00000000c6580000, 0x00000000ebf00000)
+  object space 42496K, 2% used [0x00000000c3c00000,0x00000000c3d04890,0x00000000c6580000)
+ Metaspace       used 7906K, capacity 8194K, committed 8448K, reserved 1056768K
+  class space    used 897K, capacity 1003K, committed 1024K, reserved 1048576K
+}
+Event: 1,268 GC heap before
+{Heap before GC invocations=2 (full 0):
+ PSYoungGen      total 18432K, used 18418K [0x00000000ebf00000, 0x00000000ed380000, 0x0000000100000000)
+  eden space 15872K, 100% used [0x00000000ebf00000,0x00000000ece80000,0x00000000ece80000)
+  from space 2560K, 99% used [0x00000000ece80000,0x00000000ed0fcac0,0x00000000ed100000)
+  to   space 2560K, 0% used [0x00000000ed100000,0x00000000ed100000,0x00000000ed380000)
+ ParOldGen       total 42496K, used 1042K [0x00000000c3c00000, 0x00000000c6580000, 0x00000000ebf00000)
+  object space 42496K, 2% used [0x00000000c3c00000,0x00000000c3d04890,0x00000000c6580000)
+ Metaspace       used 12122K, capacity 12562K, committed 12672K, reserved 1060864K
+  class space    used 1499K, capacity 1613K, committed 1664K, reserved 1048576K
+Event: 1,288 GC heap after
+Heap after GC invocations=2 (full 0):
+ PSYoungGen      total 18432K, used 2528K [0x00000000ebf00000, 0x00000000ee300000, 0x0000000100000000)
+  eden space 15872K, 0% used [0x00000000ebf00000,0x00000000ebf00000,0x00000000ece80000)
+  from space 2560K, 98% used [0x00000000ed100000,0x00000000ed378030,0x00000000ed380000)
+  to   space 2560K, 0% used [0x00000000ece80000,0x00000000ece80000,0x00000000ed100000)
+ ParOldGen       total 42496K, used 4438K [0x00000000c3c00000, 0x00000000c6580000, 0x00000000ebf00000)
+  object space 42496K, 10% used [0x00000000c3c00000,0x00000000c4055b40,0x00000000c6580000)
+ Metaspace       used 12122K, capacity 12562K, committed 12672K, reserved 1060864K
+  class space    used 1499K, capacity 1613K, committed 1664K, reserved 1048576K
+}
+Event: 2,145 GC heap before
+{Heap before GC invocations=3 (full 0):
+ PSYoungGen      total 18432K, used 18400K [0x00000000ebf00000, 0x00000000ee300000, 0x0000000100000000)
+  eden space 15872K, 100% used [0x00000000ebf00000,0x00000000ece80000,0x00000000ece80000)
+  from space 2560K, 98% used [0x00000000ed100000,0x00000000ed378030,0x00000000ed380000)
+  to   space 2560K, 0% used [0x00000000ece80000,0x00000000ece80000,0x00000000ed100000)
+ ParOldGen       total 42496K, used 4438K [0x00000000c3c00000, 0x00000000c6580000, 0x00000000ebf00000)
+  object space 42496K, 10% used [0x00000000c3c00000,0x00000000c4055b40,0x00000000c6580000)
+ Metaspace       used 15729K, capacity 16542K, committed 16768K, reserved 1062912K
+  class space    used 2175K, capacity 2349K, committed 2432K, reserved 1048576K
+Event: 2,169 GC heap after
+Heap after GC invocations=3 (full 0):
+ PSYoungGen      total 18432K, used 2544K [0x00000000ebf00000, 0x00000000ee300000, 0x0000000100000000)
+  eden space 15872K, 0% used [0x00000000ebf00000,0x00000000ebf00000,0x00000000ece80000)
+  from space 2560K, 99% used [0x00000000ece80000,0x00000000ed0fc040,0x00000000ed100000)
+  to   space 2560K, 0% used [0x00000000ee080000,0x00000000ee080000,0x00000000ee300000)
+ ParOldGen       total 42496K, used 8697K [0x00000000c3c00000, 0x00000000c6580000, 0x00000000ebf00000)
+  object space 42496K, 20% used [0x00000000c3c00000,0x00000000c447e738,0x00000000c6580000)
+ Metaspace       used 15729K, capacity 16542K, committed 16768K, reserved 1062912K
+  class space    used 2175K, capacity 2349K, committed 2432K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 2,110 Thread 0x00007f9b903f2800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f9b81303028 method=sun.net.www.ParseUtil.encodePath(Ljava/lang/String;Z)Ljava/lang/String; @ 109
+Event: 2,392 Thread 0x00007f9b903f2800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f9b81403ff0 method=java.util.HashMap.isEmpty()Z @ 4
+Event: 5,730 Thread 0x00007f9b903f2800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f9b81310924 method=jdk.internal.org.objectweb.asm.Type.getArgumentsAndReturnSizes(Ljava/lang/String;)I @ 47
+Event: 5,873 Thread 0x00007f9b9030c000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f9b8149b498 method=java.lang.StrictMath.floorOrCeil(DDDD)D @ 115
+Event: 16,151 Thread 0x00007f9b903f2800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f9b815734b0 method=javafx.scene.Node.impl_intersectsBounds(Lcom/sun/javafx/geom/PickRay;)D @ 902
+Event: 16,416 Thread 0x00007f9b903f2800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f9b815f318c method=javafx.scene.Node$MiscProperties.isDisable()Z @ 4
+Event: 16,416 Thread 0x00007f9b903f2800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f9b81572368 method=javafx.scene.Node$MiscProperties.isDisable()Z @ 4
+Event: 20,761 Thread 0x00007f9b903f2800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f9b8161c79c method=com.sun.javafx.event.EventHandlerManager.dispatchCapturingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; @ 1
+Event: 20,761 Thread 0x00007f9b903f2800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f9b8161c79c method=com.sun.javafx.event.EventHandlerManager.dispatchCapturingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; @ 1
+Event: 20,762 Thread 0x00007f9b903f2800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f9b8161c79c method=com.sun.javafx.event.EventHandlerManager.dispatchCapturingEvent(Ljavafx/event/Event;)Ljavafx/event/Event; @ 1
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0,392 Thread 0x00007f9b9000c000 Implicit null exception at 0x00007f9b8110e755 to 0x00007f9b8110e925
+Event: 0,920 Thread 0x00007f9b903f2800 Exception <a 'java/lang/NullPointerException'> (0x00000000ec2bced8) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u172-b11/hotspot/src/share/vm/interpreter/linkResolver.cpp, line 1185]
+Event: 0,920 Thread 0x00007f9b903f2800 Exception <a 'java/lang/NullPointerException'> (0x00000000ec2bced8) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u172-b11/hotspot/src/share/vm/prims/jvm.cpp, line 1439]
+Event: 1,131 Thread 0x00007f9b903f2800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000eca55e40) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u172-b11/hotspot/src/share/vm/runtime/sharedRuntime.cpp, line 605]
+Event: 1,132 Thread 0x00007f9b903f2800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000eca58438) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u172-b11/hotspot/src/share/vm/runtime/sharedRuntime.cpp, line 605]
+Event: 1,132 Thread 0x00007f9b903f2800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000eca5a2e0) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u172-b11/hotspot/src/share/vm/runtime/sharedRuntime.cpp, line 605]
+Event: 1,138 Thread 0x00007f9b903f2800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000eca6edf8) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u172-b11/hotspot/src/share/vm/runtime/sharedRuntime.cpp, line 605]
+Event: 1,141 Thread 0x00007f9b903f2800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000eca7f548) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u172-b11/hotspot/src/share/vm/runtime/sharedRuntime.cpp, line 605]
+Event: 1,146 Thread 0x00007f9b903f2800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000eca8cec8) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u172-b11/hotspot/src/share/vm/runtime/sharedRuntime.cpp, line 605]
+Event: 1,381 Thread 0x00007f9b903f2800 Implicit null exception at 0x00007f9b8127fbf5 to 0x00007f9b8127fdd1
+
+Events (10 events):
+Event: 20,768 loading class javafx/application/Application
+Event: 20,768 loading class javafx/application/Application done
+Event: 20,771 loading class com/sun/javafx/tk/quantum/QuantumRenderer
+Event: 20,771 loading class com/sun/javafx/tk/quantum/QuantumRenderer done
+Event: 20,771 loading class com/sun/javafx/tk/quantum/QuantumToolkit
+Event: 20,771 loading class com/sun/javafx/tk/quantum/QuantumToolkit done
+Event: 20,771 Thread 0x00007f9b9030c000 Thread exited: 0x00007f9b9030c000
+Event: 20,772 Thread 0x00007f9b903f7800 Thread exited: 0x00007f9b903f7800
+Event: 20,772 Thread 0x00007f9b9000c000 Thread exited: 0x00007f9b9000c000
+Event: 20,772 Thread 0x00007f9b9030c000 Thread added: 0x00007f9b9030c000
+
+
+Dynamic libraries:
+c3c00000-c6580000 rw-p 00000000 00:00 0 
+c6580000-ebf00000 ---p 00000000 00:00 0 
+ebf00000-ee300000 rw-p 00000000 00:00 0 
+ee300000-100000000 ---p 00000000 00:00 0 
+100000000-1002a0000 rw-p 00000000 00:00 0 
+1002a0000-140000000 ---p 00000000 00:00 0 
+5628aa531000-5628aa532000 r-xp 00000000 08:01 809165                     /usr/lib/jvm/java-8-openjdk/jre/bin/java
+5628aa731000-5628aa732000 r--p 00000000 08:01 809165                     /usr/lib/jvm/java-8-openjdk/jre/bin/java
+5628aa732000-5628aa733000 rw-p 00001000 08:01 809165                     /usr/lib/jvm/java-8-openjdk/jre/bin/java
+5628aa77b000-5628aa79c000 rw-p 00000000 00:00 0                          [heap]
+7f9b10000000-7f9b10021000 rw-p 00000000 00:00 0 
+7f9b10021000-7f9b14000000 ---p 00000000 00:00 0 
+7f9b18000000-7f9b18021000 rw-p 00000000 00:00 0 
+7f9b18021000-7f9b1c000000 ---p 00000000 00:00 0 
+7f9b1c000000-7f9b1c021000 rw-p 00000000 00:00 0 
+7f9b1c021000-7f9b20000000 ---p 00000000 00:00 0 
+7f9b20000000-7f9b20021000 rw-p 00000000 00:00 0 
+7f9b20021000-7f9b24000000 ---p 00000000 00:00 0 
+7f9b26774000-7f9b267b4000 rw-p 00000000 00:00 0 
+7f9b267b4000-7f9b26974000 ---p 00000000 00:00 0 
+7f9b26974000-7f9b26b34000 rw-s 103b11000 00:06 108                       /dev/dri/renderD128
+7f9b26b34000-7f9b26cf4000 rw-s 00000000 00:05 598428                     /drm mm object (deleted)
+7f9b26cf4000-7f9b26ef4000 rw-p 00000000 00:00 0 
+7f9b26ef4000-7f9b26ef7000 ---p 00000000 00:00 0 
+7f9b26ef7000-7f9b271f5000 rw-p 00000000 00:00 0 
+7f9b271f5000-7f9b271fa000 r-xp 00000000 08:01 811349                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjavafx_font_freetype.so
+7f9b271fa000-7f9b273f9000 ---p 00005000 08:01 811349                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjavafx_font_freetype.so
+7f9b273f9000-7f9b273fa000 r--p 00004000 08:01 811349                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjavafx_font_freetype.so
+7f9b273fa000-7f9b273fb000 rw-p 00005000 08:01 811349                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjavafx_font_freetype.so
+7f9b273fb000-7f9b275fb000 rw-p 00000000 00:00 0 
+7f9b275fb000-7f9b275fe000 r-xp 00000000 08:01 811339                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjavafx_font.so
+7f9b275fe000-7f9b277fd000 ---p 00003000 08:01 811339                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjavafx_font.so
+7f9b277fd000-7f9b277fe000 r--p 00002000 08:01 811339                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjavafx_font.so
+7f9b277fe000-7f9b277ff000 rw-p 00003000 08:01 811339                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjavafx_font.so
+7f9b277ff000-7f9b27800000 ---p 00000000 00:00 0 
+7f9b27800000-7f9b28000000 rw-p 00000000 00:00 0 
+7f9b28000000-7f9b28021000 rw-p 00000000 00:00 0 
+7f9b28021000-7f9b2c000000 ---p 00000000 00:00 0 
+7f9b2c000000-7f9b2c486000 rw-p 00000000 00:00 0 
+7f9b2c486000-7f9b30000000 ---p 00000000 00:00 0 
+7f9b30000000-7f9b30021000 rw-p 00000000 00:00 0 
+7f9b30021000-7f9b34000000 ---p 00000000 00:00 0 
+7f9b34043000-7f9b340a3000 rw-s 00000000 00:05 598426                     /drm mm object (deleted)
+7f9b340a3000-7f9b3415c000 r--p 00000000 08:01 664889                     /usr/share/fonts/TTF/DejaVuSans.ttf
+7f9b3415c000-7f9b3435c000 rw-p 00000000 00:00 0 
+7f9b3435c000-7f9b3435f000 ---p 00000000 00:00 0 
+7f9b3435f000-7f9b3445d000 rw-p 00000000 00:00 0 
+7f9b3445d000-7f9b34460000 ---p 00000000 00:00 0 
+7f9b34460000-7f9b3455e000 rw-p 00000000 00:00 0 
+7f9b3455e000-7f9b3469f000 rw-s 00000000 08:03 2228318                    /home/patryk/.cache/mesa_shader_cache/index
+7f9b3469f000-7f9b346a2000 ---p 00000000 00:00 0 
+7f9b346a2000-7f9b347a0000 rw-p 00000000 00:00 0 
+7f9b347a0000-7f9b347a3000 ---p 00000000 00:00 0 
+7f9b347a3000-7f9b348a1000 rw-p 00000000 00:00 0 
+7f9b348a1000-7f9b348a6000 r-xp 00000000 08:01 280745                     /usr/lib/libogg.so.0.8.3
+7f9b348a6000-7f9b34aa6000 ---p 00005000 08:01 280745                     /usr/lib/libogg.so.0.8.3
+7f9b34aa6000-7f9b34aa7000 r--p 00005000 08:01 280745                     /usr/lib/libogg.so.0.8.3
+7f9b34aa7000-7f9b34aa8000 rw-p 00006000 08:01 280745                     /usr/lib/libogg.so.0.8.3
+7f9b34aa8000-7f9b34ad2000 r-xp 00000000 08:01 279279                     /usr/lib/libvorbis.so.0.4.8
+7f9b34ad2000-7f9b34cd2000 ---p 0002a000 08:01 279279                     /usr/lib/libvorbis.so.0.4.8
+7f9b34cd2000-7f9b34cd3000 r--p 0002a000 08:01 279279                     /usr/lib/libvorbis.so.0.4.8
+7f9b34cd3000-7f9b34cd4000 rw-p 0002b000 08:01 279279                     /usr/lib/libvorbis.so.0.4.8
+7f9b34cd4000-7f9b34cdc000 r-xp 00000000 08:01 278555                     /usr/lib/libltdl.so.7.3.1
+7f9b34cdc000-7f9b34edc000 ---p 00008000 08:01 278555                     /usr/lib/libltdl.so.7.3.1
+7f9b34edc000-7f9b34edd000 r--p 00008000 08:01 278555                     /usr/lib/libltdl.so.7.3.1
+7f9b34edd000-7f9b34ede000 rw-p 00009000 08:01 278555                     /usr/lib/libltdl.so.7.3.1
+7f9b34ede000-7f9b34ef3000 r-xp 00000000 08:01 280045                     /usr/lib/libtdb.so.1.3.15
+7f9b34ef3000-7f9b350f2000 ---p 00015000 08:01 280045                     /usr/lib/libtdb.so.1.3.15
+7f9b350f2000-7f9b350f3000 r--p 00014000 08:01 280045                     /usr/lib/libtdb.so.1.3.15
+7f9b350f3000-7f9b350f4000 rw-p 00015000 08:01 280045                     /usr/lib/libtdb.so.1.3.15
+7f9b350f4000-7f9b350fb000 r-xp 00000000 08:01 280881                     /usr/lib/libvorbisfile.so.3.3.7
+7f9b350fb000-7f9b352fb000 ---p 00007000 08:01 280881                     /usr/lib/libvorbisfile.so.3.3.7
+7f9b352fb000-7f9b352fc000 r--p 00007000 08:01 280881                     /usr/lib/libvorbisfile.so.3.3.7
+7f9b352fc000-7f9b352fd000 rw-p 00008000 08:01 280881                     /usr/lib/libvorbisfile.so.3.3.7
+7f9b352fd000-7f9b3530e000 r-xp 00000000 08:01 279600                     /usr/lib/libcanberra.so.0.2.5
+7f9b3530e000-7f9b3550d000 ---p 00011000 08:01 279600                     /usr/lib/libcanberra.so.0.2.5
+7f9b3550d000-7f9b3550e000 r--p 00010000 08:01 279600                     /usr/lib/libcanberra.so.0.2.5
+7f9b3550e000-7f9b3550f000 rw-p 00011000 08:01 279600                     /usr/lib/libcanberra.so.0.2.5
+7f9b3550f000-7f9b35513000 r-xp 00000000 08:01 279597                     /usr/lib/libcanberra-gtk.so.0.1.9
+7f9b35513000-7f9b35712000 ---p 00004000 08:01 279597                     /usr/lib/libcanberra-gtk.so.0.1.9
+7f9b35712000-7f9b35713000 r--p 00003000 08:01 279597                     /usr/lib/libcanberra-gtk.so.0.1.9
+7f9b35713000-7f9b35714000 rw-p 00004000 08:01 279597                     /usr/lib/libcanberra-gtk.so.0.1.9
+7f9b35714000-7f9b35719000 r-xp 00000000 08:01 796868                     /usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so
+7f9b35719000-7f9b35918000 ---p 00005000 08:01 796868                     /usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so
+7f9b35918000-7f9b35919000 r--p 00004000 08:01 796868                     /usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so
+7f9b35919000-7f9b3591a000 rw-p 00005000 08:01 796868                     /usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so
+7f9b3591a000-7f9b35923000 r-xp 00000000 08:01 787047                     /usr/lib/gtk-2.0/2.10.0/engines/libpixmap.so
+7f9b35923000-7f9b35b23000 ---p 00009000 08:01 787047                     /usr/lib/gtk-2.0/2.10.0/engines/libpixmap.so
+7f9b35b23000-7f9b35b24000 r--p 00009000 08:01 787047                     /usr/lib/gtk-2.0/2.10.0/engines/libpixmap.so
+7f9b35b24000-7f9b35b25000 rw-p 0000a000 08:01 787047                     /usr/lib/gtk-2.0/2.10.0/engines/libpixmap.so
+7f9b35b25000-7f9b35b4e000 r-xp 00000000 08:01 811348                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libglass.so
+7f9b35b4e000-7f9b35d4e000 ---p 00029000 08:01 811348                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libglass.so
+7f9b35d4e000-7f9b35d4f000 r--p 00029000 08:01 811348                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libglass.so
+7f9b35d4f000-7f9b35d50000 rw-p 0002a000 08:01 811348                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libglass.so
+7f9b35d50000-7f9b35d51000 rw-p 00000000 00:00 0 
+7f9b35d51000-7f9b35d52000 ---p 00000000 00:00 0 
+7f9b35d52000-7f9b36552000 rw-p 00000000 00:00 0 
+7f9b36552000-7f9b36693000 rw-s 00000000 08:03 2228318                    /home/patryk/.cache/mesa_shader_cache/index
+7f9b36693000-7f9b3669b000 r-xp 00000000 08:01 272125                     /usr/lib/libpciaccess.so.0.11.1
+7f9b3669b000-7f9b3689b000 ---p 00008000 08:01 272125                     /usr/lib/libpciaccess.so.0.11.1
+7f9b3689b000-7f9b3689c000 r--p 00008000 08:01 272125                     /usr/lib/libpciaccess.so.0.11.1
+7f9b3689c000-7f9b3689d000 rw-p 00009000 08:01 272125                     /usr/lib/libpciaccess.so.0.11.1
+7f9b3689d000-7f9b368a4000 r-xp 00000000 08:01 272046                     /usr/lib/libdrm_nouveau.so.2.0.0
+7f9b368a4000-7f9b36aa3000 ---p 00007000 08:01 272046                     /usr/lib/libdrm_nouveau.so.2.0.0
+7f9b36aa3000-7f9b36aa4000 r--p 00006000 08:01 272046                     /usr/lib/libdrm_nouveau.so.2.0.0
+7f9b36aa4000-7f9b36aa5000 rw-p 00007000 08:01 272046                     /usr/lib/libdrm_nouveau.so.2.0.0
+7f9b36aa5000-7f9b36ab0000 r-xp 00000000 08:01 265583                     /usr/lib/libdrm_radeon.so.1.0.1
+7f9b36ab0000-7f9b36caf000 ---p 0000b000 08:01 265583                     /usr/lib/libdrm_radeon.so.1.0.1
+7f9b36caf000-7f9b36cb0000 r--p 0000a000 08:01 265583                     /usr/lib/libdrm_radeon.so.1.0.1
+7f9b36cb0000-7f9b36cb1000 rw-p 0000b000 08:01 265583                     /usr/lib/libdrm_radeon.so.1.0.1
+7f9b36cb1000-7f9b36cd4000 r-xp 00000000 08:01 265585                     /usr/lib/libdrm_intel.so.1.0.0
+7f9b36cd4000-7f9b36ed3000 ---p 00023000 08:01 265585                     /usr/lib/libdrm_intel.so.1.0.0
+7f9b36ed3000-7f9b36ed4000 r--p 00022000 08:01 265585                     /usr/lib/libdrm_intel.so.1.0.0
+7f9b36ed4000-7f9b36ed5000 rw-p 00023000 08:01 265585                     /usr/lib/libdrm_intel.so.1.0.0
+7f9b36ed5000-7f9b37776000 r-xp 00000000 08:01 410090                     /usr/lib/dri/i965_dri.so
+7f9b37776000-7f9b37976000 ---p 008a1000 08:01 410090                     /usr/lib/dri/i965_dri.so
+7f9b37976000-7f9b379d1000 r--p 008a1000 08:01 410090                     /usr/lib/dri/i965_dri.so
+7f9b379d1000-7f9b379dc000 rw-p 008fc000 08:01 410090                     /usr/lib/dri/i965_dri.so
+7f9b379dc000-7f9b37a8e000 rw-p 00000000 00:00 0 
+7f9b37a8e000-7f9b37a8f000 r-xp 00000000 08:01 272177                     /usr/lib/libxshmfence.so.1.0.0
+7f9b37a8f000-7f9b37c8e000 ---p 00001000 08:01 272177                     /usr/lib/libxshmfence.so.1.0.0
+7f9b37c8e000-7f9b37c8f000 r--p 00000000 08:01 272177                     /usr/lib/libxshmfence.so.1.0.0
+7f9b37c8f000-7f9b37c90000 rw-p 00001000 08:01 272177                     /usr/lib/libxshmfence.so.1.0.0
+7f9b37c90000-7f9b37c96000 r-xp 00000000 08:01 267061                     /usr/lib/libxcb-sync.so.1.0.0
+7f9b37c96000-7f9b37e95000 ---p 00006000 08:01 267061                     /usr/lib/libxcb-sync.so.1.0.0
+7f9b37e95000-7f9b37e96000 r--p 00005000 08:01 267061                     /usr/lib/libxcb-sync.so.1.0.0
+7f9b37e96000-7f9b37e97000 rw-p 00006000 08:01 267061                     /usr/lib/libxcb-sync.so.1.0.0
+7f9b37e97000-7f9b37e99000 r-xp 00000000 08:01 266033                     /usr/lib/libxcb-present.so.0.0.0
+7f9b37e99000-7f9b38098000 ---p 00002000 08:01 266033                     /usr/lib/libxcb-present.so.0.0.0
+7f9b38098000-7f9b38099000 r--p 00001000 08:01 266033                     /usr/lib/libxcb-present.so.0.0.0
+7f9b38099000-7f9b3809a000 rw-p 00002000 08:01 266033                     /usr/lib/libxcb-present.so.0.0.0
+7f9b3809a000-7f9b3809d000 r-xp 00000000 08:01 267062                     /usr/lib/libxcb-dri3.so.0.0.0
+7f9b3809d000-7f9b3829c000 ---p 00003000 08:01 267062                     /usr/lib/libxcb-dri3.so.0.0.0
+7f9b3829c000-7f9b3829d000 r--p 00002000 08:01 267062                     /usr/lib/libxcb-dri3.so.0.0.0
+7f9b3829d000-7f9b3829e000 rw-p 00003000 08:01 267062                     /usr/lib/libxcb-dri3.so.0.0.0
+7f9b3829e000-7f9b382a2000 r-xp 00000000 08:01 267073                     /usr/lib/libxcb-dri2.so.0.0.0
+7f9b382a2000-7f9b384a1000 ---p 00004000 08:01 267073                     /usr/lib/libxcb-dri2.so.0.0.0
+7f9b384a1000-7f9b384a2000 r--p 00003000 08:01 267073                     /usr/lib/libxcb-dri2.so.0.0.0
+7f9b384a2000-7f9b384a3000 rw-p 00004000 08:01 267073                     /usr/lib/libxcb-dri2.so.0.0.0
+7f9b384a3000-7f9b384a4000 r-xp 00000000 08:01 267292                     /usr/lib/libX11-xcb.so.1.0.0
+7f9b384a4000-7f9b386a3000 ---p 00001000 08:01 267292                     /usr/lib/libX11-xcb.so.1.0.0
+7f9b386a3000-7f9b386a4000 r--p 00000000 08:01 267292                     /usr/lib/libX11-xcb.so.1.0.0
+7f9b386a4000-7f9b386a5000 rw-p 00001000 08:01 267292                     /usr/lib/libX11-xcb.so.1.0.0
+7f9b386a5000-7f9b386be000 r-xp 00000000 08:01 267086                     /usr/lib/libxcb-glx.so.0.0.0
+7f9b386be000-7f9b388bd000 ---p 00019000 08:01 267086                     /usr/lib/libxcb-glx.so.0.0.0
+7f9b388bd000-7f9b388bf000 r--p 00018000 08:01 267086                     /usr/lib/libxcb-glx.so.0.0.0
+7f9b388bf000-7f9b388c0000 rw-p 0001a000 08:01 267086                     /usr/lib/libxcb-glx.so.0.0.0
+7f9b388c0000-7f9b388d1000 r-xp 00000000 08:01 280878                     /usr/lib/libdrm.so.2.4.0
+7f9b388d1000-7f9b38ad0000 ---p 00011000 08:01 280878                     /usr/lib/libdrm.so.2.4.0
+7f9b38ad0000-7f9b38ad1000 r--p 00010000 08:01 280878                     /usr/lib/libdrm.so.2.4.0
+7f9b38ad1000-7f9b38ad2000 rw-p 00011000 08:01 280878                     /usr/lib/libdrm.so.2.4.0
+7f9b38ad2000-7f9b38afe000 r-xp 00000000 08:01 277767                     /usr/lib/libglapi.so.0.0.0
+7f9b38afe000-7f9b38cfd000 ---p 0002c000 08:01 277767                     /usr/lib/libglapi.so.0.0.0
+7f9b38cfd000-7f9b38d01000 r--p 0002b000 08:01 277767                     /usr/lib/libglapi.so.0.0.0
+7f9b38d01000-7f9b38d02000 rw-p 0002f000 08:01 277767                     /usr/lib/libglapi.so.0.0.0
+7f9b38d02000-7f9b38d03000 rw-p 00000000 00:00 0 
+7f9b38d03000-7f9b38d74000 r-xp 00000000 08:01 277758                     /usr/lib/libGLX_mesa.so.0.0.0
+7f9b38d74000-7f9b38f74000 ---p 00071000 08:01 277758                     /usr/lib/libGLX_mesa.so.0.0.0
+7f9b38f74000-7f9b38f77000 r--p 00071000 08:01 277758                     /usr/lib/libGLX_mesa.so.0.0.0
+7f9b38f77000-7f9b38f78000 rw-p 00074000 08:01 277758                     /usr/lib/libGLX_mesa.so.0.0.0
+7f9b38f78000-7f9b38f7e000 r-xp 00000000 08:01 280434                     /usr/lib/libdatrie.so.1.3.5
+7f9b38f7e000-7f9b3917d000 ---p 00006000 08:01 280434                     /usr/lib/libdatrie.so.1.3.5
+7f9b3917d000-7f9b3917e000 r--p 00005000 08:01 280434                     /usr/lib/libdatrie.so.1.3.5
+7f9b3917e000-7f9b3917f000 rw-p 00006000 08:01 280434                     /usr/lib/libdatrie.so.1.3.5
+7f9b3917f000-7f9b391a9000 r-xp 00000000 08:01 278638                     /usr/lib/libgraphite2.so.3.0.1
+7f9b391a9000-7f9b393a8000 ---p 0002a000 08:01 278638                     /usr/lib/libgraphite2.so.3.0.1
+7f9b393a8000-7f9b393aa000 r--p 00029000 08:01 278638                     /usr/lib/libgraphite2.so.3.0.1
+7f9b393aa000-7f9b393ab000 rw-p 0002b000 08:01 278638                     /usr/lib/libgraphite2.so.3.0.1
+7f9b393ab000-7f9b393f4000 r-xp 00000000 08:01 265919                     /usr/lib/libblkid.so.1.1.0
+7f9b393f4000-7f9b395f4000 ---p 00049000 08:01 265919                     /usr/lib/libblkid.so.1.1.0
+7f9b395f4000-7f9b395f9000 r--p 00049000 08:01 265919                     /usr/lib/libblkid.so.1.1.0
+7f9b395f9000-7f9b395fa000 rw-p 0004e000 08:01 265919                     /usr/lib/libblkid.so.1.1.0
+7f9b395fa000-7f9b395fb000 rw-p 00000000 00:00 0 
+7f9b395fb000-7f9b39600000 r-xp 00000000 08:01 272171                     /usr/lib/libXdmcp.so.6.0.0
+7f9b39600000-7f9b397ff000 ---p 00005000 08:01 272171                     /usr/lib/libXdmcp.so.6.0.0
+7f9b397ff000-7f9b39800000 r--p 00004000 08:01 272171                     /usr/lib/libXdmcp.so.6.0.0
+7f9b39800000-7f9b39801000 rw-p 00005000 08:01 272171                     /usr/lib/libXdmcp.so.6.0.0
+7f9b39801000-7f9b39803000 r-xp 00000000 08:01 263437                     /usr/lib/libXau.so.6.0.0
+7f9b39803000-7f9b39a03000 ---p 00002000 08:01 263437                     /usr/lib/libXau.so.6.0.0
+7f9b39a03000-7f9b39a04000 r--p 00002000 08:01 263437                     /usr/lib/libXau.so.6.0.0
+7f9b39a04000-7f9b39a05000 rw-p 00003000 08:01 263437                     /usr/lib/libXau.so.6.0.0
+7f9b39a05000-7f9b39a73000 r-xp 00000000 08:01 264311                     /usr/lib/libGLdispatch.so.0.0.0
+7f9b39a73000-7f9b39c72000 ---p 0006e000 08:01 264311                     /usr/lib/libGLdispatch.so.0.0.0
+7f9b39c72000-7f9b39c9a000 r--p 0006d000 08:01 264311                     /usr/lib/libGLdispatch.so.0.0.0
+7f9b39c9a000-7f9b39c9b000 rw-p 00095000 08:01 264311                     /usr/lib/libGLdispatch.so.0.0.0
+7f9b39c9b000-7f9b39cbb000 rw-p 00000000 00:00 0 
+7f9b39cbb000-7f9b39ccb000 r-xp 00000000 08:01 265438                     /usr/lib/libGLX.so.0.0.0
+7f9b39ccb000-7f9b39eca000 ---p 00010000 08:01 265438                     /usr/lib/libGLX.so.0.0.0
+7f9b39eca000-7f9b39ecb000 r--p 0000f000 08:01 265438                     /usr/lib/libGLX.so.0.0.0
+7f9b39ecb000-7f9b39ecc000 rw-p 00010000 08:01 265438                     /usr/lib/libGLX.so.0.0.0
+7f9b39ecc000-7f9b39eec000 rw-p 00000000 00:00 0 
+7f9b39eec000-7f9b39f5d000 r-xp 00000000 08:01 265880                     /usr/lib/libpcre.so.1.2.10
+7f9b39f5d000-7f9b3a15c000 ---p 00071000 08:01 265880                     /usr/lib/libpcre.so.1.2.10
+7f9b3a15c000-7f9b3a15d000 r--p 00070000 08:01 265880                     /usr/lib/libpcre.so.1.2.10
+7f9b3a15d000-7f9b3a15e000 rw-p 00071000 08:01 265880                     /usr/lib/libpcre.so.1.2.10
+7f9b3a15e000-7f9b3a16d000 r-xp 00000000 08:01 262009                     /usr/lib/libbz2.so.1.0.6
+7f9b3a16d000-7f9b3a36c000 ---p 0000f000 08:01 262009                     /usr/lib/libbz2.so.1.0.6
+7f9b3a36c000-7f9b3a36d000 r--p 0000e000 08:01 262009                     /usr/lib/libbz2.so.1.0.6
+7f9b3a36d000-7f9b3a36e000 rw-p 0000f000 08:01 262009                     /usr/lib/libbz2.so.1.0.6
+7f9b3a36e000-7f9b3a374000 r-xp 00000000 08:01 265797                     /usr/lib/libuuid.so.1.3.0
+7f9b3a374000-7f9b3a573000 ---p 00006000 08:01 265797                     /usr/lib/libuuid.so.1.3.0
+7f9b3a573000-7f9b3a574000 r--p 00005000 08:01 265797                     /usr/lib/libuuid.so.1.3.0
+7f9b3a574000-7f9b3a575000 rw-p 00006000 08:01 265797                     /usr/lib/libuuid.so.1.3.0
+7f9b3a575000-7f9b3a5a4000 r-xp 00000000 08:01 263015                     /usr/lib/libexpat.so.1.6.7
+7f9b3a5a4000-7f9b3a7a4000 ---p 0002f000 08:01 263015                     /usr/lib/libexpat.so.1.6.7
+7f9b3a7a4000-7f9b3a7a6000 r--p 0002f000 08:01 263015                     /usr/lib/libexpat.so.1.6.7
+7f9b3a7a6000-7f9b3a7a7000 rw-p 00031000 08:01 263015                     /usr/lib/libexpat.so.1.6.7
+7f9b3a7a7000-7f9b3a7ae000 r-xp 00000000 08:01 267372                     /usr/lib/libffi.so.6.0.4
+7f9b3a7ae000-7f9b3a9ae000 ---p 00007000 08:01 267372                     /usr/lib/libffi.so.6.0.4
+7f9b3a9ae000-7f9b3a9af000 r--p 00007000 08:01 267372                     /usr/lib/libffi.so.6.0.4
+7f9b3a9af000-7f9b3a9b0000 rw-p 00008000 08:01 267372                     /usr/lib/libffi.so.6.0.4
+7f9b3a9b0000-7f9b3a9b8000 r-xp 00000000 08:01 279205                     /usr/lib/libthai.so.0.3.0
+7f9b3a9b8000-7f9b3abb8000 ---p 00008000 08:01 279205                     /usr/lib/libthai.so.0.3.0
+7f9b3abb8000-7f9b3abb9000 r--p 00008000 08:01 279205                     /usr/lib/libthai.so.0.3.0
+7f9b3abb9000-7f9b3abba000 rw-p 00009000 08:01 279205                     /usr/lib/libthai.so.0.3.0
+7f9b3abba000-7f9b3ac64000 r-xp 00000000 08:01 279226                     /usr/lib/libharfbuzz.so.0.10800.4
+7f9b3ac64000-7f9b3ae64000 ---p 000aa000 08:01 279226                     /usr/lib/libharfbuzz.so.0.10800.4
+7f9b3ae64000-7f9b3ae65000 r--p 000aa000 08:01 279226                     /usr/lib/libharfbuzz.so.0.10800.4
+7f9b3ae65000-7f9b3ae66000 rw-p 000ab000 08:01 279226                     /usr/lib/libharfbuzz.so.0.10800.4
+7f9b3ae66000-7f9b3aeba000 r-xp 00000000 08:01 265920                     /usr/lib/libmount.so.1.1.0
+7f9b3aeba000-7f9b3b0b9000 ---p 00054000 08:01 265920                     /usr/lib/libmount.so.1.1.0
+7f9b3b0b9000-7f9b3b0bc000 r--p 00053000 08:01 265920                     /usr/lib/libmount.so.1.1.0
+7f9b3b0bc000-7f9b3b0bd000 rw-p 00056000 08:01 265920                     /usr/lib/libmount.so.1.1.0
+7f9b3b0bd000-7f9b3b0be000 rw-p 00000000 00:00 0 
+7f9b3b0be000-7f9b3b0d1000 r-xp 00000000 08:01 262767                     /usr/lib/libresolv-2.27.so
+7f9b3b0d1000-7f9b3b2d1000 ---p 00013000 08:01 262767                     /usr/lib/libresolv-2.27.so
+7f9b3b2d1000-7f9b3b2d2000 r--p 00013000 08:01 262767                     /usr/lib/libresolv-2.27.so
+7f9b3b2d2000-7f9b3b2d3000 rw-p 00014000 08:01 262767                     /usr/lib/libresolv-2.27.so
+7f9b3b2d3000-7f9b3b2d5000 rw-p 00000000 00:00 0 
+7f9b3b2d5000-7f9b3b2e1000 r-xp 00000000 08:01 267063                     /usr/lib/libxcb-render.so.0.0.0
+7f9b3b2e1000-7f9b3b4e1000 ---p 0000c000 08:01 267063                     /usr/lib/libxcb-render.so.0.0.0
+7f9b3b4e1000-7f9b3b4e2000 r--p 0000c000 08:01 267063                     /usr/lib/libxcb-render.so.0.0.0
+7f9b3b4e2000-7f9b3b4e3000 rw-p 0000d000 08:01 267063                     /usr/lib/libxcb-render.so.0.0.0
+7f9b3b4e3000-7f9b3b50a000 r-xp 00000000 08:01 266032                     /usr/lib/libxcb.so.1.1.0
+7f9b3b50a000-7f9b3b70a000 ---p 00027000 08:01 266032                     /usr/lib/libxcb.so.1.1.0
+7f9b3b70a000-7f9b3b70b000 r--p 00027000 08:01 266032                     /usr/lib/libxcb.so.1.1.0
+7f9b3b70b000-7f9b3b70c000 rw-p 00028000 08:01 266032                     /usr/lib/libxcb.so.1.1.0
+7f9b3b70c000-7f9b3b70e000 r-xp 00000000 08:01 267601                     /usr/lib/libxcb-shm.so.0.0.0
+7f9b3b70e000-7f9b3b90e000 ---p 00002000 08:01 267601                     /usr/lib/libxcb-shm.so.0.0.0
+7f9b3b90e000-7f9b3b90f000 r--p 00002000 08:01 267601                     /usr/lib/libxcb-shm.so.0.0.0
+7f9b3b90f000-7f9b3b910000 rw-p 00003000 08:01 267601                     /usr/lib/libxcb-shm.so.0.0.0
+7f9b3b910000-7f9b3b945000 r-xp 00000000 08:01 279955                     /usr/lib/libpng16.so.16.34.0
+7f9b3b945000-7f9b3bb44000 ---p 00035000 08:01 279955                     /usr/lib/libpng16.so.16.34.0
+7f9b3bb44000-7f9b3bb45000 r--p 00034000 08:01 279955                     /usr/lib/libpng16.so.16.34.0
+7f9b3bb45000-7f9b3bb46000 rw-p 00035000 08:01 279955                     /usr/lib/libpng16.so.16.34.0
+7f9b3bb46000-7f9b3bbe5000 r-xp 00000000 08:01 279951                     /usr/lib/libpixman-1.so.0.34.0
+7f9b3bbe5000-7f9b3bde5000 ---p 0009f000 08:01 279951                     /usr/lib/libpixman-1.so.0.34.0
+7f9b3bde5000-7f9b3bded000 r--p 0009f000 08:01 279951                     /usr/lib/libpixman-1.so.0.34.0
+7f9b3bded000-7f9b3bdee000 rw-p 000a7000 08:01 279951                     /usr/lib/libpixman-1.so.0.34.0
+7f9b3bdee000-7f9b3bdff000 r-xp 00000000 08:01 272172                     /usr/lib/libXext.so.6.4.0
+7f9b3bdff000-7f9b3bffe000 ---p 00011000 08:01 272172                     /usr/lib/libXext.so.6.4.0
+7f9b3bffe000-7f9b3bfff000 r--p 00010000 08:01 272172                     /usr/lib/libXext.so.6.4.0
+7f9b3bfff000-7f9b3c000000 rw-p 00011000 08:01 272172                     /usr/lib/libXext.so.6.4.0
+7f9b3c000000-7f9b3d914000 rw-p 00000000 00:00 0 
+7f9b3d914000-7f9b40000000 ---p 00000000 00:00 0 
+7f9b40029000-7f9b40037000 rw-s 00000000 00:05 598425                     /drm mm object (deleted)
+7f9b40037000-7f9b40047000 rw-s 00000000 00:05 598448                     /drm mm object (deleted)
+7f9b40047000-7f9b40049000 r-xp 00000000 08:01 263492                     /usr/lib/libXdamage.so.1.1.0
+7f9b40049000-7f9b40248000 ---p 00002000 08:01 263492                     /usr/lib/libXdamage.so.1.1.0
+7f9b40248000-7f9b40249000 r--p 00001000 08:01 263492                     /usr/lib/libXdamage.so.1.1.0
+7f9b40249000-7f9b4024a000 rw-p 00002000 08:01 263492                     /usr/lib/libXdamage.so.1.1.0
+7f9b4024a000-7f9b4024c000 r-xp 00000000 08:01 280905                     /usr/lib/libXcomposite.so.1.0.0
+7f9b4024c000-7f9b4044b000 ---p 00002000 08:01 280905                     /usr/lib/libXcomposite.so.1.0.0
+7f9b4044b000-7f9b4044c000 r--p 00001000 08:01 280905                     /usr/lib/libXcomposite.so.1.0.0
+7f9b4044c000-7f9b4044d000 rw-p 00002000 08:01 280905                     /usr/lib/libXcomposite.so.1.0.0
+7f9b4044d000-7f9b40456000 r-xp 00000000 08:01 278138                     /usr/lib/libXcursor.so.1.0.2
+7f9b40456000-7f9b40655000 ---p 00009000 08:01 278138                     /usr/lib/libXcursor.so.1.0.2
+7f9b40655000-7f9b40656000 r--p 00008000 08:01 278138                     /usr/lib/libXcursor.so.1.0.2
+7f9b40656000-7f9b40657000 rw-p 00009000 08:01 278138                     /usr/lib/libXcursor.so.1.0.2
+7f9b40657000-7f9b40661000 r-xp 00000000 08:01 276470                     /usr/lib/libXrandr.so.2.2.0
+7f9b40661000-7f9b40860000 ---p 0000a000 08:01 276470                     /usr/lib/libXrandr.so.2.2.0
+7f9b40860000-7f9b40861000 r--p 00009000 08:01 276470                     /usr/lib/libXrandr.so.2.2.0
+7f9b40861000-7f9b40862000 rw-p 0000a000 08:01 276470                     /usr/lib/libXrandr.so.2.2.0
+7f9b40862000-7f9b40871000 r-xp 00000000 08:01 279480                     /usr/lib/libXi.so.6.1.0
+7f9b40871000-7f9b40a71000 ---p 0000f000 08:01 279480                     /usr/lib/libXi.so.6.1.0
+7f9b40a71000-7f9b40a72000 r--p 0000f000 08:01 279480                     /usr/lib/libXi.so.6.1.0
+7f9b40a72000-7f9b40a73000 rw-p 00010000 08:01 279480                     /usr/lib/libXi.so.6.1.0
+7f9b40a73000-7f9b40a75000 r-xp 00000000 08:01 277751                     /usr/lib/libXinerama.so.1.0.0
+7f9b40a75000-7f9b40c74000 ---p 00002000 08:01 277751                     /usr/lib/libXinerama.so.1.0.0
+7f9b40c74000-7f9b40c75000 r--p 00001000 08:01 277751                     /usr/lib/libXinerama.so.1.0.0
+7f9b40c75000-7f9b40c76000 rw-p 00002000 08:01 277751                     /usr/lib/libXinerama.so.1.0.0
+7f9b40c76000-7f9b40c7f000 r-xp 00000000 08:01 279486                     /usr/lib/libXrender.so.1.3.0
+7f9b40c7f000-7f9b40e7f000 ---p 00009000 08:01 279486                     /usr/lib/libXrender.so.1.3.0
+7f9b40e7f000-7f9b40e80000 r--p 00009000 08:01 279486                     /usr/lib/libXrender.so.1.3.0
+7f9b40e80000-7f9b40e81000 rw-p 0000a000 08:01 279486                     /usr/lib/libXrender.so.1.3.0
+7f9b40e81000-7f9b40e86000 r-xp 00000000 08:01 263495                     /usr/lib/libXfixes.so.3.1.0
+7f9b40e86000-7f9b41085000 ---p 00005000 08:01 263495                     /usr/lib/libXfixes.so.3.1.0
+7f9b41085000-7f9b41086000 r--p 00004000 08:01 263495                     /usr/lib/libXfixes.so.3.1.0
+7f9b41086000-7f9b41087000 rw-p 00005000 08:01 263495                     /usr/lib/libXfixes.so.3.1.0
+7f9b41087000-7f9b4108a000 r-xp 00000000 08:01 264062                     /usr/lib/libgmodule-2.0.so.0.5600.1
+7f9b4108a000-7f9b41289000 ---p 00003000 08:01 264062                     /usr/lib/libgmodule-2.0.so.0.5600.1
+7f9b41289000-7f9b4128a000 r--p 00002000 08:01 264062                     /usr/lib/libgmodule-2.0.so.0.5600.1
+7f9b4128a000-7f9b4128b000 rw-p 00003000 08:01 264062                     /usr/lib/libgmodule-2.0.so.0.5600.1
+7f9b4128b000-7f9b412a2000 r-xp 00000000 08:01 265661                     /usr/lib/libgcc_s.so.1
+7f9b412a2000-7f9b414a1000 ---p 00017000 08:01 265661                     /usr/lib/libgcc_s.so.1
+7f9b414a1000-7f9b414a2000 r--p 00016000 08:01 265661                     /usr/lib/libgcc_s.so.1
+7f9b414a2000-7f9b414a3000 rw-p 00017000 08:01 265661                     /usr/lib/libgcc_s.so.1
+7f9b414a3000-7f9b4161c000 r-xp 00000000 08:01 269758                     /usr/lib/libstdc++.so.6.0.25
+7f9b4161c000-7f9b4181c000 ---p 00179000 08:01 269758                     /usr/lib/libstdc++.so.6.0.25
+7f9b4181c000-7f9b41828000 r--p 00179000 08:01 269758                     /usr/lib/libstdc++.so.6.0.25
+7f9b41828000-7f9b41829000 rw-p 00185000 08:01 269758                     /usr/lib/libstdc++.so.6.0.25
+7f9b41829000-7f9b4182c000 rw-p 00000000 00:00 0 
+7f9b4182c000-7f9b4189c000 r-xp 00000000 08:01 265439                     /usr/lib/libGL.so.1.0.0
+7f9b4189c000-7f9b41a9b000 ---p 00070000 08:01 265439                     /usr/lib/libGL.so.1.0.0
+7f9b41a9b000-7f9b41ab5000 r--p 0006f000 08:01 265439                     /usr/lib/libGL.so.1.0.0
+7f9b41ab5000-7f9b41ab6000 rw-p 00089000 08:01 265439                     /usr/lib/libGL.so.1.0.0
+7f9b41ab6000-7f9b41ab7000 rw-p 00000000 00:00 0 
+7f9b41ab7000-7f9b41abb000 r-xp 00000000 08:01 267299                     /usr/lib/libXxf86vm.so.1.0.0
+7f9b41abb000-7f9b41cbb000 ---p 00004000 08:01 267299                     /usr/lib/libXxf86vm.so.1.0.0
+7f9b41cbb000-7f9b41cbc000 r--p 00004000 08:01 267299                     /usr/lib/libXxf86vm.so.1.0.0
+7f9b41cbc000-7f9b41cbd000 rw-p 00005000 08:01 267299                     /usr/lib/libXxf86vm.so.1.0.0
+7f9b41cbd000-7f9b41df6000 r-xp 00000000 08:01 267293                     /usr/lib/libX11.so.6.3.0
+7f9b41df6000-7f9b41ff6000 ---p 00139000 08:01 267293                     /usr/lib/libX11.so.6.3.0
+7f9b41ff6000-7f9b41ff7000 r--p 00139000 08:01 267293                     /usr/lib/libX11.so.6.3.0
+7f9b41ff7000-7f9b41ffc000 rw-p 0013a000 08:01 267293                     /usr/lib/libX11.so.6.3.0
+7f9b41ffc000-7f9b42001000 r-xp 00000000 08:01 279489                     /usr/lib/libXtst.so.6.1.0
+7f9b42001000-7f9b42200000 ---p 00005000 08:01 279489                     /usr/lib/libXtst.so.6.1.0
+7f9b42200000-7f9b42201000 r--p 00004000 08:01 279489                     /usr/lib/libXtst.so.6.1.0
+7f9b42201000-7f9b42202000 rw-p 00005000 08:01 279489                     /usr/lib/libXtst.so.6.1.0
+7f9b42202000-7f9b42317000 r-xp 00000000 08:01 264061                     /usr/lib/libglib-2.0.so.0.5600.1
+7f9b42317000-7f9b42516000 ---p 00115000 08:01 264061                     /usr/lib/libglib-2.0.so.0.5600.1
+7f9b42516000-7f9b42517000 r--p 00114000 08:01 264061                     /usr/lib/libglib-2.0.so.0.5600.1
+7f9b42517000-7f9b42518000 rw-p 00115000 08:01 264061                     /usr/lib/libglib-2.0.so.0.5600.1
+7f9b42518000-7f9b42519000 rw-p 00000000 00:00 0 
+7f9b42519000-7f9b4251a000 r-xp 00000000 08:01 264063                     /usr/lib/libgthread-2.0.so.0.5600.1
+7f9b4251a000-7f9b42719000 ---p 00001000 08:01 264063                     /usr/lib/libgthread-2.0.so.0.5600.1
+7f9b42719000-7f9b4271a000 r--p 00000000 08:01 264063                     /usr/lib/libgthread-2.0.so.0.5600.1
+7f9b4271a000-7f9b4271b000 rw-p 00001000 08:01 264063                     /usr/lib/libgthread-2.0.so.0.5600.1
+7f9b4271b000-7f9b427dc000 r-xp 00000000 08:01 273961                     /usr/lib/libfreetype.so.6.16.1
+7f9b427dc000-7f9b429dc000 ---p 000c1000 08:01 273961                     /usr/lib/libfreetype.so.6.16.1
+7f9b429dc000-7f9b429e3000 r--p 000c1000 08:01 273961                     /usr/lib/libfreetype.so.6.16.1
+7f9b429e3000-7f9b429e4000 rw-p 000c8000 08:01 273961                     /usr/lib/libfreetype.so.6.16.1
+7f9b429e4000-7f9b42a24000 r-xp 00000000 08:01 274575                     /usr/lib/libfontconfig.so.1.11.1
+7f9b42a24000-7f9b42c24000 ---p 00040000 08:01 274575                     /usr/lib/libfontconfig.so.1.11.1
+7f9b42c24000-7f9b42c26000 r--p 00040000 08:01 274575                     /usr/lib/libfontconfig.so.1.11.1
+7f9b42c26000-7f9b42c27000 rw-p 00042000 08:01 274575                     /usr/lib/libfontconfig.so.1.11.1
+7f9b42c27000-7f9b42c42000 r-xp 00000000 08:01 286220                     /usr/lib/libfribidi.so.0.4.0
+7f9b42c42000-7f9b42e41000 ---p 0001b000 08:01 286220                     /usr/lib/libfribidi.so.0.4.0
+7f9b42e41000-7f9b42e42000 r--p 0001a000 08:01 286220                     /usr/lib/libfribidi.so.0.4.0
+7f9b42e42000-7f9b42e43000 rw-p 0001b000 08:01 286220                     /usr/lib/libfribidi.so.0.4.0
+7f9b42e43000-7f9b42e95000 r-xp 00000000 08:01 264064                     /usr/lib/libgobject-2.0.so.0.5600.1
+7f9b42e95000-7f9b43095000 ---p 00052000 08:01 264064                     /usr/lib/libgobject-2.0.so.0.5600.1
+7f9b43095000-7f9b43096000 r--p 00052000 08:01 264064                     /usr/lib/libgobject-2.0.so.0.5600.1
+7f9b43096000-7f9b43097000 rw-p 00053000 08:01 264064                     /usr/lib/libgobject-2.0.so.0.5600.1
+7f9b43097000-7f9b430db000 r-xp 00000000 08:01 279640                     /usr/lib/libpango-1.0.so.0.4200.2
+7f9b430db000-7f9b432da000 ---p 00044000 08:01 279640                     /usr/lib/libpango-1.0.so.0.4200.2
+7f9b432da000-7f9b432dd000 r--p 00043000 08:01 279640                     /usr/lib/libpango-1.0.so.0.4200.2
+7f9b432dd000-7f9b432de000 rw-p 00046000 08:01 279640                     /usr/lib/libpango-1.0.so.0.4200.2
+7f9b432de000-7f9b432f1000 r-xp 00000000 08:01 280138                     /usr/lib/libpangoft2-1.0.so.0.4200.2
+7f9b432f1000-7f9b434f1000 ---p 00013000 08:01 280138                     /usr/lib/libpangoft2-1.0.so.0.4200.2
+7f9b434f1000-7f9b434f2000 r--p 00013000 08:01 280138                     /usr/lib/libpangoft2-1.0.so.0.4200.2
+7f9b434f2000-7f9b434f3000 rw-p 00014000 08:01 280138                     /usr/lib/libpangoft2-1.0.so.0.4200.2
+7f9b434f3000-7f9b4368a000 r-xp 00000000 08:01 264065                     /usr/lib/libgio-2.0.so.0.5600.1
+7f9b4368a000-7f9b43889000 ---p 00197000 08:01 264065                     /usr/lib/libgio-2.0.so.0.5600.1
+7f9b43889000-7f9b43890000 r--p 00196000 08:01 264065                     /usr/lib/libgio-2.0.so.0.5600.1
+7f9b43890000-7f9b43891000 rw-p 0019d000 08:01 264065                     /usr/lib/libgio-2.0.so.0.5600.1
+7f9b43891000-7f9b43893000 rw-p 00000000 00:00 0 
+7f9b43893000-7f9b438b6000 r-xp 00000000 08:01 274654                     /usr/lib/libgdk_pixbuf-2.0.so.0.3600.12
+7f9b438b6000-7f9b43ab5000 ---p 00023000 08:01 274654                     /usr/lib/libgdk_pixbuf-2.0.so.0.3600.12
+7f9b43ab5000-7f9b43ab6000 r--p 00022000 08:01 274654                     /usr/lib/libgdk_pixbuf-2.0.so.0.3600.12
+7f9b43ab6000-7f9b43ab7000 rw-p 00023000 08:01 274654                     /usr/lib/libgdk_pixbuf-2.0.so.0.3600.12
+7f9b43ab7000-7f9b43bd4000 r-xp 00000000 08:01 276770                     /usr/lib/libcairo.so.2.11512.0
+7f9b43bd4000-7f9b43dd4000 ---p 0011d000 08:01 276770                     /usr/lib/libcairo.so.2.11512.0
+7f9b43dd4000-7f9b43dd8000 r--p 0011d000 08:01 276770                     /usr/lib/libcairo.so.2.11512.0
+7f9b43dd8000-7f9b43dd9000 rw-p 00121000 08:01 276770                     /usr/lib/libcairo.so.2.11512.0
+7f9b43dd9000-7f9b43dda000 rw-p 00000000 00:00 0 
+7f9b43dda000-7f9b43dfd000 r-xp 00000000 08:01 273438                     /usr/lib/libatk-1.0.so.0.22810.1
+7f9b43dfd000-7f9b43ffc000 ---p 00023000 08:01 273438                     /usr/lib/libatk-1.0.so.0.22810.1
+7f9b43ffc000-7f9b43fff000 r--p 00022000 08:01 273438                     /usr/lib/libatk-1.0.so.0.22810.1
+7f9b43fff000-7f9b44000000 rw-p 00025000 08:01 273438                     /usr/lib/libatk-1.0.so.0.22810.1
+7f9b44000000-7f9b44021000 rw-p 00000000 00:00 0 
+7f9b44021000-7f9b48000000 ---p 00000000 00:00 0 
+7f9b48000000-7f9b48021000 rw-p 00000000 00:00 0 
+7f9b48021000-7f9b4c000000 ---p 00000000 00:00 0 
+7f9b4c000000-7f9b4c3db000 rw-p 00000000 00:00 0 
+7f9b4c3db000-7f9b50000000 ---p 00000000 00:00 0 
+7f9b50000000-7f9b503a7000 rw-p 00000000 00:00 0 
+7f9b503a7000-7f9b54000000 ---p 00000000 00:00 0 
+7f9b54000000-7f9b54054000 rw-p 00000000 00:00 0 
+7f9b54054000-7f9b58000000 ---p 00000000 00:00 0 
+7f9b58000000-7f9b583c9000 rw-p 00000000 00:00 0 
+7f9b583c9000-7f9b5c000000 ---p 00000000 00:00 0 
+7f9b5c000000-7f9b5c021000 rw-p 00000000 00:00 0 
+7f9b5c021000-7f9b60000000 ---p 00000000 00:00 0 
+7f9b60000000-7f9b60021000 rw-p 00000000 00:00 0 
+7f9b60021000-7f9b64000000 ---p 00000000 00:00 0 
+7f9b64000000-7f9b64021000 rw-p 00000000 00:00 0 
+7f9b64021000-7f9b68000000 ---p 00000000 00:00 0 
+7f9b68000000-7f9b68021000 rw-p 00000000 00:00 0 
+7f9b68021000-7f9b6c000000 ---p 00000000 00:00 0 
+7f9b6c000000-7f9b6c021000 rw-p 00000000 00:00 0 
+7f9b6c021000-7f9b70000000 ---p 00000000 00:00 0 
+7f9b70000000-7f9b70021000 rw-p 00000000 00:00 0 
+7f9b70021000-7f9b74000000 ---p 00000000 00:00 0 
+7f9b74000000-7f9b74021000 rw-p 00000000 00:00 0 
+7f9b74021000-7f9b78000000 ---p 00000000 00:00 0 
+7f9b78007000-7f9b78013000 rw-s 00000000 00:05 598401                     /drm mm object (deleted)
+7f9b78013000-7f9b780a6000 r--s 00000000 08:01 408362                     /var/cache/fontconfig/b07c0fb8-5935-4d86-9d9c-6d251f5d0fed-le64.cache-7
+7f9b780a6000-7f9b780b4000 r--s 00000000 08:01 408360                     /var/cache/fontconfig/bbcc23e3-b3da-4dbc-98e8-b12118be89c8-le64.cache-7
+7f9b780b4000-7f9b780e2000 r--s 00000000 08:01 397892                     /var/cache/fontconfig/c583572a-a7b1-4803-89fb-869a1f77d8b5-le64.cache-7
+7f9b780e2000-7f9b780ee000 r-xp 00000000 08:01 279805                     /usr/lib/libpangocairo-1.0.so.0.4200.2
+7f9b780ee000-7f9b782ed000 ---p 0000c000 08:01 279805                     /usr/lib/libpangocairo-1.0.so.0.4200.2
+7f9b782ed000-7f9b782ee000 r--p 0000b000 08:01 279805                     /usr/lib/libpangocairo-1.0.so.0.4200.2
+7f9b782ee000-7f9b782ef000 rw-p 0000c000 08:01 279805                     /usr/lib/libpangocairo-1.0.so.0.4200.2
+7f9b782ef000-7f9b7839d000 r-xp 00000000 08:01 277647                     /usr/lib/libgdk-x11-2.0.so.0.2400.32
+7f9b7839d000-7f9b7859d000 ---p 000ae000 08:01 277647                     /usr/lib/libgdk-x11-2.0.so.0.2400.32
+7f9b7859d000-7f9b785a2000 r--p 000ae000 08:01 277647                     /usr/lib/libgdk-x11-2.0.so.0.2400.32
+7f9b785a2000-7f9b785a3000 rw-p 000b3000 08:01 277647                     /usr/lib/libgdk-x11-2.0.so.0.2400.32
+7f9b785a3000-7f9b789d3000 r-xp 00000000 08:01 277648                     /usr/lib/libgtk-x11-2.0.so.0.2400.32
+7f9b789d3000-7f9b78bd3000 ---p 00430000 08:01 277648                     /usr/lib/libgtk-x11-2.0.so.0.2400.32
+7f9b78bd3000-7f9b78bdd000 r--p 00430000 08:01 277648                     /usr/lib/libgtk-x11-2.0.so.0.2400.32
+7f9b78bdd000-7f9b78bde000 rw-p 0043a000 08:01 277648                     /usr/lib/libgtk-x11-2.0.so.0.2400.32
+7f9b78bde000-7f9b78be0000 rw-p 00000000 00:00 0 
+7f9b78be0000-7f9b78bec000 r-xp 00000000 08:01 811347                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libprism_es2.so
+7f9b78bec000-7f9b78deb000 ---p 0000c000 08:01 811347                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libprism_es2.so
+7f9b78deb000-7f9b78dec000 r--p 0000b000 08:01 811347                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libprism_es2.so
+7f9b78dec000-7f9b78ded000 rw-p 0000c000 08:01 811347                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libprism_es2.so
+7f9b78ded000-7f9b78df0000 ---p 00000000 00:00 0 
+7f9b78df0000-7f9b78eee000 rw-p 00000000 00:00 0 
+7f9b78eee000-7f9b78eef000 ---p 00000000 00:00 0 
+7f9b78eef000-7f9b78fef000 rw-p 00000000 00:00 0 
+7f9b78fef000-7f9b78ff2000 ---p 00000000 00:00 0 
+7f9b78ff2000-7f9b790f0000 rw-p 00000000 00:00 0 
+7f9b790f0000-7f9b790f1000 ---p 00000000 00:00 0 
+7f9b790f1000-7f9b790f4000 ---p 00000000 00:00 0 
+7f9b790f4000-7f9b791f1000 rw-p 00000000 00:00 0 
+7f9b791f1000-7f9b79208000 r-xp 00000000 08:01 809142                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnet.so
+7f9b79208000-7f9b79407000 ---p 00017000 08:01 809142                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnet.so
+7f9b79407000-7f9b79408000 r--p 00016000 08:01 809142                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnet.so
+7f9b79408000-7f9b79409000 rw-p 00017000 08:01 809142                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnet.so
+7f9b79409000-7f9b7940a000 ---p 00000000 00:00 0 
+7f9b7940a000-7f9b7940d000 ---p 00000000 00:00 0 
+7f9b7940d000-7f9b7950a000 rw-p 00000000 00:00 0 
+7f9b7950a000-7f9b7950b000 ---p 00000000 00:00 0 
+7f9b7950b000-7f9b7950e000 ---p 00000000 00:00 0 
+7f9b7950e000-7f9b7960b000 rw-p 00000000 00:00 0 
+7f9b7960b000-7f9b7960e000 ---p 00000000 00:00 0 
+7f9b7960e000-7f9b7970c000 rw-p 00000000 00:00 0 
+7f9b7970c000-7f9b7970f000 ---p 00000000 00:00 0 
+7f9b7970f000-7f9b7980d000 rw-p 00000000 00:00 0 
+7f9b7980d000-7f9b79ad9000 r--p 00000000 08:01 269754                     /usr/lib/locale/locale-archive
+7f9b79ad9000-7f9b79adc000 ---p 00000000 00:00 0 
+7f9b79adc000-7f9b79bda000 rw-p 00000000 00:00 0 
+7f9b79bda000-7f9b79bdd000 ---p 00000000 00:00 0 
+7f9b79bdd000-7f9b79cdb000 rw-p 00000000 00:00 0 
+7f9b79cdb000-7f9b79cdc000 ---p 00000000 00:00 0 
+7f9b79cdc000-7f9b7c000000 rw-p 00000000 00:00 0 
+7f9b7c000000-7f9b7c021000 rw-p 00000000 00:00 0 
+7f9b7c021000-7f9b80000000 ---p 00000000 00:00 0 
+7f9b80000000-7f9b80005000 rw-s 00000000 00:05 598449                     /drm mm object (deleted)
+7f9b80005000-7f9b8000c000 r--s 00000000 08:01 397896                     /var/cache/fontconfig/b1280944-3268-446a-a907-d3828357bdb3-le64.cache-7
+7f9b8000c000-7f9b8000f000 r--s 00000000 08:01 408357                     /var/cache/fontconfig/1595b077-2a07-4337-b59d-78efdd819a07-le64.cache-7
+7f9b8000f000-7f9b80012000 r--s 00000000 08:01 397894                     /var/cache/fontconfig/f885c672-f297-4b05-9c4c-1b9da827891b-le64.cache-7
+7f9b80012000-7f9b80017000 rw-s 00000000 00:05 598400                     /drm mm object (deleted)
+7f9b80017000-7f9b8001b000 rw-s 00000000 00:05 598392                     /drm mm object (deleted)
+7f9b8001b000-7f9b8001f000 rw-s 00000000 00:05 598427                     /drm mm object (deleted)
+7f9b80020000-7f9b80024000 rw-s 00000000 00:05 598456                     /drm mm object (deleted)
+7f9b80024000-7f9b8004e000 r--p 00000000 08:01 673345                     /usr/share/locale/pl/LC_MESSAGES/gtk20-properties.mo
+7f9b8004e000-7f9b8005d000 r--p 00000000 08:01 673346                     /usr/share/locale/pl/LC_MESSAGES/gtk20.mo
+7f9b8005d000-7f9b80062000 rw-s 00000000 00:05 596556                     /drm mm object (deleted)
+7f9b80062000-7f9b800f9000 r--s 008dd000 08:01 811337                     /usr/lib/jvm/java-8-openjdk/jre/lib/ext/jfxrt.jar
+7f9b800f9000-7f9b81000000 rw-p 00000000 00:00 0 
+7f9b81000000-7f9b81630000 rwxp 00000000 00:00 0 
+7f9b81630000-7f9b90000000 ---p 00000000 00:00 0 
+7f9b90000000-7f9b90404000 rw-p 00000000 00:00 0 
+7f9b90404000-7f9b94000000 ---p 00000000 00:00 0 
+7f9b94000000-7f9b94025000 r--p 00000000 08:01 655187                     /usr/share/locale/pl/LC_MESSAGES/libc.mo
+7f9b94025000-7f9b94429000 rw-p 00000000 00:00 0 
+7f9b94429000-7f9b945f8000 r--s 03c31000 08:01 809067                     /usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar
+7f9b945f8000-7f9b94850000 rw-p 00000000 00:00 0 
+7f9b94850000-7f9b94851000 ---p 00000000 00:00 0 
+7f9b94851000-7f9b94951000 rw-p 00000000 00:00 0 
+7f9b94951000-7f9b94952000 ---p 00000000 00:00 0 
+7f9b94952000-7f9b94a52000 rw-p 00000000 00:00 0 
+7f9b94a52000-7f9b94a53000 ---p 00000000 00:00 0 
+7f9b94a53000-7f9b94b53000 rw-p 00000000 00:00 0 
+7f9b94b53000-7f9b94b54000 ---p 00000000 00:00 0 
+7f9b94b54000-7f9b94c69000 rw-p 00000000 00:00 0 
+7f9b94c69000-7f9b94d96000 ---p 00000000 00:00 0 
+7f9b94d96000-7f9b94dab000 rw-p 00000000 00:00 0 
+7f9b94dab000-7f9b94ed7000 ---p 00000000 00:00 0 
+7f9b94ed7000-7f9b94eea000 rw-p 00000000 00:00 0 
+7f9b94eea000-7f9b94f78000 ---p 00000000 00:00 0 
+7f9b94f78000-7f9b94f92000 rw-p 00000000 00:00 0 
+7f9b94f92000-7f9b95339000 ---p 00000000 00:00 0 
+7f9b95339000-7f9b95341000 r-xp 00000000 08:01 809126                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libzip.so
+7f9b95341000-7f9b95540000 ---p 00008000 08:01 809126                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libzip.so
+7f9b95540000-7f9b95541000 r--p 00007000 08:01 809126                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libzip.so
+7f9b95541000-7f9b95542000 rw-p 00008000 08:01 809126                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libzip.so
+7f9b95542000-7f9b9554d000 r-xp 00000000 08:01 263035                     /usr/lib/libnss_files-2.27.so
+7f9b9554d000-7f9b9574c000 ---p 0000b000 08:01 263035                     /usr/lib/libnss_files-2.27.so
+7f9b9574c000-7f9b9574d000 r--p 0000a000 08:01 263035                     /usr/lib/libnss_files-2.27.so
+7f9b9574d000-7f9b9574e000 rw-p 0000b000 08:01 263035                     /usr/lib/libnss_files-2.27.so
+7f9b9574e000-7f9b95754000 rw-p 00000000 00:00 0 
+7f9b95754000-7f9b9575e000 r-xp 00000000 08:01 809154                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libinstrument.so
+7f9b9575e000-7f9b9595d000 ---p 0000a000 08:01 809154                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libinstrument.so
+7f9b9595d000-7f9b9595e000 r--p 00009000 08:01 809154                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libinstrument.so
+7f9b9595e000-7f9b9595f000 rw-p 0000a000 08:01 809154                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libinstrument.so
+7f9b9595f000-7f9b9598d000 r-xp 00000000 08:01 809125                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f9b9598d000-7f9b95b8c000 ---p 0002e000 08:01 809125                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f9b95b8c000-7f9b95b8d000 r--p 0002d000 08:01 809125                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f9b95b8d000-7f9b95b8f000 rw-p 0002e000 08:01 809125                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f9b95b8f000-7f9b95b9c000 r-xp 00000000 08:01 809150                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f9b95b9c000-7f9b95d9b000 ---p 0000d000 08:01 809150                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f9b95d9b000-7f9b95d9d000 r--p 0000c000 08:01 809150                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f9b95d9d000-7f9b95d9e000 rw-p 0000e000 08:01 809150                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f9b95d9e000-7f9b95da5000 r-xp 00000000 08:01 262482                     /usr/lib/librt-2.27.so
+7f9b95da5000-7f9b95fa4000 ---p 00007000 08:01 262482                     /usr/lib/librt-2.27.so
+7f9b95fa4000-7f9b95fa5000 r--p 00006000 08:01 262482                     /usr/lib/librt-2.27.so
+7f9b95fa5000-7f9b95fa6000 rw-p 00007000 08:01 262482                     /usr/lib/librt-2.27.so
+7f9b95fa6000-7f9b96139000 r-xp 00000000 08:01 262205                     /usr/lib/libm-2.27.so
+7f9b96139000-7f9b96339000 ---p 00193000 08:01 262205                     /usr/lib/libm-2.27.so
+7f9b96339000-7f9b9633a000 r--p 00193000 08:01 262205                     /usr/lib/libm-2.27.so
+7f9b9633a000-7f9b9633b000 rw-p 00194000 08:01 262205                     /usr/lib/libm-2.27.so
+7f9b9633b000-7f9b96fe2000 r-xp 00000000 08:01 809155                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f9b96fe2000-7f9b971e1000 ---p 00ca7000 08:01 809155                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f9b971e1000-7f9b97276000 r--p 00ca6000 08:01 809155                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f9b97276000-7f9b9729e000 rw-p 00d3b000 08:01 809155                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f9b9729e000-7f9b972cf000 rw-p 00000000 00:00 0 
+7f9b972cf000-7f9b97482000 r-xp 00000000 08:01 263229                     /usr/lib/libc-2.27.so
+7f9b97482000-7f9b97681000 ---p 001b3000 08:01 263229                     /usr/lib/libc-2.27.so
+7f9b97681000-7f9b97685000 r--p 001b2000 08:01 263229                     /usr/lib/libc-2.27.so
+7f9b97685000-7f9b97687000 rw-p 001b6000 08:01 263229                     /usr/lib/libc-2.27.so
+7f9b97687000-7f9b9768b000 rw-p 00000000 00:00 0 
+7f9b9768b000-7f9b9768e000 r-xp 00000000 08:01 262347                     /usr/lib/libdl-2.27.so
+7f9b9768e000-7f9b9788d000 ---p 00003000 08:01 262347                     /usr/lib/libdl-2.27.so
+7f9b9788d000-7f9b9788e000 r--p 00002000 08:01 262347                     /usr/lib/libdl-2.27.so
+7f9b9788e000-7f9b9788f000 rw-p 00003000 08:01 262347                     /usr/lib/libdl-2.27.so
+7f9b9788f000-7f9b9789d000 r-xp 00000000 08:01 809158                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f9b9789d000-7f9b97a9c000 ---p 0000e000 08:01 809158                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f9b97a9c000-7f9b97a9d000 r--p 0000d000 08:01 809158                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f9b97a9d000-7f9b97a9e000 rw-p 0000e000 08:01 809158                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f9b97a9e000-7f9b97ab4000 r-xp 00000000 08:01 267621                     /usr/lib/libz.so.1.2.11
+7f9b97ab4000-7f9b97cb3000 ---p 00016000 08:01 267621                     /usr/lib/libz.so.1.2.11
+7f9b97cb3000-7f9b97cb4000 r--p 00015000 08:01 267621                     /usr/lib/libz.so.1.2.11
+7f9b97cb4000-7f9b97cb5000 rw-p 00016000 08:01 267621                     /usr/lib/libz.so.1.2.11
+7f9b97cb5000-7f9b97cce000 r-xp 00000000 08:01 263301                     /usr/lib/libpthread-2.27.so
+7f9b97cce000-7f9b97ecd000 ---p 00019000 08:01 263301                     /usr/lib/libpthread-2.27.so
+7f9b97ecd000-7f9b97ece000 r--p 00018000 08:01 263301                     /usr/lib/libpthread-2.27.so
+7f9b97ece000-7f9b97ecf000 rw-p 00019000 08:01 263301                     /usr/lib/libpthread-2.27.so
+7f9b97ecf000-7f9b97ed3000 rw-p 00000000 00:00 0 
+7f9b97ed3000-7f9b97ef8000 r-xp 00000000 08:01 263230                     /usr/lib/ld-2.27.so
+7f9b97ef8000-7f9b97ef9000 rw-s 00000000 00:05 597739                     /drm mm object (deleted)
+7f9b97ef9000-7f9b97f0c000 r--s 00346000 08:01 809072                     /usr/lib/jvm/java-8-openjdk/jre/lib/resources.jar
+7f9b97f0c000-7f9b97fb5000 rw-p 00000000 00:00 0 
+7f9b97fb5000-7f9b97fb6000 ---p 00000000 00:00 0 
+7f9b97fb6000-7f9b97fb9000 ---p 00000000 00:00 0 
+7f9b97fb9000-7f9b980ba000 rw-p 00000000 00:00 0 
+7f9b980ba000-7f9b980bb000 rw-s 00000000 00:05 597738                     /drm mm object (deleted)
+7f9b980bc000-7f9b980bd000 rwxp 00000000 00:00 0 
+7f9b980bd000-7f9b980c1000 rw-s 00000000 00:05 598380                     /drm mm object (deleted)
+7f9b980c1000-7f9b980c5000 rw-s 00000000 00:05 598378                     /drm mm object (deleted)
+7f9b980c5000-7f9b980ca000 rw-s 00000000 00:05 598377                     /drm mm object (deleted)
+7f9b980ca000-7f9b980cc000 r--s 0001a000 08:01 808668                     /usr/share/intellijidea-ce/lib/idea_rt.jar
+7f9b980cc000-7f9b980cd000 r--s 00000000 08:01 809061                     /usr/lib/jvm/java-8-openjdk/jre/lib/management-agent.jar
+7f9b980cd000-7f9b980d2000 r--s 0009d000 08:01 809066                     /usr/lib/jvm/java-8-openjdk/jre/lib/jsse.jar
+7f9b980d2000-7f9b980d3000 r--s 00009000 08:01 811336                     /usr/lib/jvm/java-8-openjdk/jre/lib/jfxswt.jar
+7f9b980d3000-7f9b980d5000 r--s 00016000 08:01 809065                     /usr/lib/jvm/java-8-openjdk/jre/lib/jce.jar
+7f9b980d5000-7f9b980da000 r--s 002f9000 08:01 809062                     /usr/lib/jvm/java-8-openjdk/jre/lib/charsets.jar
+7f9b980da000-7f9b980ed000 rw-p 00000000 00:00 0 
+7f9b980ed000-7f9b980f5000 rw-s 00000000 00:29 57                         /tmp/hsperfdata_patryk/31868
+7f9b980f5000-7f9b980f6000 rw-p 00000000 00:00 0 
+7f9b980f6000-7f9b980f7000 r--p 00000000 00:00 0 
+7f9b980f7000-7f9b980f8000 r--p 00024000 08:01 263230                     /usr/lib/ld-2.27.so
+7f9b980f8000-7f9b980f9000 rw-p 00025000 08:01 263230                     /usr/lib/ld-2.27.so
+7f9b980f9000-7f9b980fa000 rw-p 00000000 00:00 0 
+7ffea726f000-7ffea7290000 rw-p 00000000 00:00 0                          [stack]
+7ffea73ee000-7ffea73f1000 r--p 00000000 00:00 0                          [vvar]
+7ffea73f1000-7ffea73f3000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -javaagent:/usr/share/intellijidea-ce/lib/idea_rt.jar=36897:/usr/share/intellijidea-ce/bin -Dfile.encoding=UTF-8 
+java_command: sample.Main
+java_class_path (initial): /usr/lib/jvm/java-8-openjdk/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/ext/cldrdata.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/ext/dnsns.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/ext/jaccess.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/ext/jfxrt.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/ext/localedata.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/ext/nashorn.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/ext/sunec.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/ext/sunjce_provider.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/ext/sunpkcs11.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/ext/zipfs.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/jfxswt.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/management-agent.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar:/home/patryk/Dokumenty/programowanie/javafx-automat/out/production/javafx-automat:/usr/share/intellijidea-ce/lib/idea_rt.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+USERNAME=patryk
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xaac6c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xaac6c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x8e2e80], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: SIG_IGN, sa_mask[0]=00000000000010000000000000000000, sa_flags=SA_RESTART
+SIGXFSZ: [libjvm.so+0x8e2e80], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x8e2e80], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x8e2d30], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x8e31e0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x8e31e0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x8e31e0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x8e31e0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=ManjaroLinux
+DISTRIB_RELEASE=17.1.11
+DISTRIB_CODENAME=Hakoila
+DISTRIB_DESCRIPTION="Manjaro Linux"
+
+uname:Linux 4.14.56-1-MANJARO #1 SMP PREEMPT Tue Jul 17 13:20:49 UTC 2018 x86_64
+libc:glibc 2.27 NPTL 2.27 
+rlimit: STACK 8192k, CORE infinity, NPROC 15355, NOFILE 4096, AS infinity
+load average:0,50 0,48 0,57
+
+/proc/meminfo:
+MemTotal:        3944852 kB
+MemFree:          137608 kB
+MemAvailable:     101564 kB
+Buffers:            8396 kB
+Cached:           409928 kB
+SwapCached:        26920 kB
+Active:          2950896 kB
+Inactive:         636692 kB
+Active(anon):    2886352 kB
+Inactive(anon):   578032 kB
+Active(file):      64544 kB
+Inactive(file):    58660 kB
+Unevictable:          32 kB
+Mlocked:              32 kB
+SwapTotal:       3071996 kB
+SwapFree:        2367512 kB
+Dirty:              9352 kB
+Writeback:             0 kB
+AnonPages:       3165864 kB
+Mapped:           203248 kB
+Shmem:            309868 kB
+Slab:              96824 kB
+SReclaimable:      41376 kB
+SUnreclaim:        55448 kB
+KernelStack:       12576 kB
+PageTables:        46044 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     5044420 kB
+Committed_AS:    9449768 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   1308672 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      184128 kB
+DirectMap2M:     3911680 kB
+
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, clmul, erms, ht, tsc, tscinvbit, tscinv
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i3-3120M CPU @ 2.50GHz
+stepping	: 9
+microcode	: 0x1f
+cpu MHz		: 1464.538
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx f16c lahf_lm cpuid_fault epb pti ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt dtherm arat pln pts
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 4985.39
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i3-3120M CPU @ 2.50GHz
+stepping	: 9
+microcode	: 0x1f
+cpu MHz		: 1440.096
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx f16c lahf_lm cpuid_fault epb pti ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt dtherm arat pln pts
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 4985.39
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i3-3120M CPU @ 2.50GHz
+stepping	: 9
+microcode	: 0x1f
+cpu MHz		: 1386.260
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx f16c lahf_lm cpuid_fault epb pti ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt dtherm arat pln pts
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 4985.39
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i3-3120M CPU @ 2.50GHz
+stepping	: 9
+microcode	: 0x1f
+cpu MHz		: 1630.206
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx f16c lahf_lm cpuid_fault epb pti ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt dtherm arat pln pts
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 4985.39
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 3944852k(137608k free), swap 3071996k(2367512k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.172-b11) for linux-amd64 JRE (1.8.0_172-b11), built on Apr 26 2018 02:09:23 by "builduser" with gcc 7.3.1 20180406
+
+time: Sat Jul 28 18:24:42 2018
+elapsed time: 46 seconds (0d 0h 0m 46s)
+
