@@ -1,11 +1,14 @@
 package sample;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.util.ArrayList;
 
 public class Model {
     private static final int capacity = (int)Math.pow(2,16);
     private ArrayList program_lines;
-    private short [] memory;
+    private ObservableList<MemoryCell> memory = FXCollections.observableArrayList();
     private short program_counter = 0;
     private Dictionary dictionary = new Dictionary(this);
 
@@ -73,7 +76,7 @@ public class Model {
         memoryAssign();
     }
 
-    public short[] getMemory() {
+    public ObservableList<MemoryCell> getMemory() {
         return memory;
     }
 
@@ -82,6 +85,8 @@ public class Model {
     }
 
     private void memoryAssign(){
-        memory = new short [capacity];
+        for(int i=0; i<10000; ++i){
+            memory.add(new MemoryCell(0));
+        }
     }
 }

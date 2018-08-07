@@ -15,10 +15,10 @@ public class Dictionary {
                 (Model model, short param) ->  model.accumulator = param);
 
         instructions.put("in",
-                (Model model, short param) ->  model.accumulator = model.getMemory()[model.memory_pointer]);
+                (Model model, short param) ->  model.accumulator = model.getMemory().get(model.memory_pointer).getData());
 
         instructions.put("out",
-                (Model model, short param) ->  model.getMemory()[model.memory_pointer] = model.accumulator);
+                (Model model, short param) ->  model.getMemory().get(model.memory_pointer).setData(model.accumulator));
 
         instructions.put("pfr",
                 (Model model, short param) ->  model.memory_pointer += param);
@@ -27,13 +27,13 @@ public class Dictionary {
                 (Model model, short param) ->  model.memory_pointer -= param);
         
         instructions.put("drf",
-                (Model model, short param) ->  model.accumulator = model.getMemory()[model.memory_pointer]);
+                (Model model, short param) ->  model.accumulator = model.getMemory().get(model.memory_pointer).getData());
 
         instructions.put("add",
-                (Model model, short param) ->  model.accumulator += model.getMemory()[model.memory_pointer]);
+                (Model model, short param) ->  model.accumulator += model.getMemory().get(model.memory_pointer).getData());
 
         instructions.put("sub",
-                (Model model, short param) ->  model.accumulator -= model.getMemory()[model.memory_pointer]);
+                (Model model, short param) ->  model.accumulator -= model.getMemory().get(model.memory_pointer).getData());
 
         instructions.put("cmp",
                 (Model model, short param) ->  {});
