@@ -1,5 +1,6 @@
 package sample;
 
+import com.sun.org.apache.bcel.internal.classfile.Code;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -9,11 +10,12 @@ public class Model {
     private static final int capacity = (int)Math.pow(2,16);
     private ArrayList program_lines;
     private ObservableList<MemoryCell> memory = FXCollections.observableArrayList();
-    private short program_counter = 0;
     private Dictionary dictionary = new Dictionary(this);
+    private MacroMap macro_map = new MacroMap();
 
     public short accumulator = 0;
     public short memory_pointer = 0;
+    public short program_counter = 0;
 
 
     public Model(){
@@ -34,15 +36,19 @@ public class Model {
             program_lines.add(lines.substring(last_eol+1,eol));
             last_eol = eol;
         }
-        //look for labels TO DO
-        for(Object line : program_lines){
-            String label = new Parser((String)line).get_label();
-            if(label.length()>0) System.out.println(label);
+        //look for labels
+        macro_map.clear();
+        for (int i = 0; i < program_lines.size(); i++) {
+            String line = (String)program_lines.get(i);
+            String label = new Parser(line).get_label();
+            if(label.length() > 0){
+                macro_map.setMacro(label, (short)i);
+                System.out.println(label + " := " + i);
+            }
         }
-
     }
 
-    public boolean execute_next_command(){
+    public boolean execute_next_command() throws CodeError {
 
         if(program_counter >= program_lines.size())  return false;
 
@@ -59,12 +65,16 @@ public class Model {
             if(param.length() == 0) param = "0";
 
             //exexute
-            try{
-                dictionary.execute(inst, Short.valueOf(param));
+            short true_param = 0;
+            if(Character.isDigit(param.charAt(0))){
+                true_param = Short.valueOf(param);
             }
-            catch (CodeError error){
-                System.out.println(error.getMessage() + ":" + error.getLine());
+            else {
+                true_param = macro_map.getValue(param);
             }
+
+            dictionary.execute(inst,true_param);
+
         }
 
         ++program_counter;
@@ -80,12 +90,8 @@ public class Model {
         return memory;
     }
 
-    public int getProgram_counter(){
-        return program_counter;
-    }
-
     private void memoryAssign(){
-        for(int i=0; i<10000; ++i){
+        for(int i=0; i<capacity; ++i){
             memory.add(new MemoryCell(0));
         }
     }

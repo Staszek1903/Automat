@@ -36,10 +36,14 @@ public class Dictionary {
                 (Model model, short param) ->  model.accumulator -= model.getMemory().get(model.memory_pointer).getData());
 
         instructions.put("cmp",
-                (Model model, short param) ->  {});
+                (Model model, short param) ->  {
+                    // TODO: 08.08.18 setting states in this and other instructions
+                });
 
         instructions.put("jmp",
-                (Model model, short param) ->  {});
+                (Model model, short param) ->  model.program_counter = param);
+
+        // TODO: 08.08.18 branching instructions
     }
 
     public void execute(String inst, short param) throws CodeError {

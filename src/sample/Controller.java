@@ -1,6 +1,7 @@
 package sample;
 
 
+import com.sun.org.apache.bcel.internal.classfile.Code;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -65,8 +66,7 @@ public class Controller implements Initializable {
 
     public void stepButton(Event event) {
         model.set_program(code_area.getText());
-        model.execute_next_command();
-        updateDisplay();
+        execute_instruction();
 
     }
 
@@ -76,16 +76,13 @@ public class Controller implements Initializable {
     }
 
     private void updateDisplay() {
-        program_counter.setText(String.valueOf(model.getProgram_counter()));
+        program_counter.setText(String.valueOf(model.program_counter));
         memory_pointer.setText(String.valueOf(model.memory_pointer));
         accumulator.setText(String.valueOf(model.accumulator));
     }
 
     private void start() {
-        timer = new Timeline(new KeyFrame(Duration.millis(1000), actionEvent -> {
-            if (!model.execute_next_command()) stop();
-            updateDisplay();
-        }));
+        timer = new Timeline(new KeyFrame(Duration.millis(1000), actionEvent -> execute_instruction()));
         model.set_program(code_area.getText());
         running = true;
         running_indicator.setProgress(ProgressIndicator.INDETERMINATE_PROGRESS);
@@ -95,9 +92,21 @@ public class Controller implements Initializable {
     }
 
     private void stop() {
-        timer.stop();
+        if(timer != null) timer.stop();
         running = false;
         running_indicator.setProgress(1.0f);
+    }
+
+    private void execute_instruction(){
+        try{
+            if (!model.execute_next_command()) stop();
+            updateDisplay();
+        }
+        catch (CodeError error){
+            System.out.println(error.getMessage() + " : " + model.program_counter);
+            stop();
+            // TODO: 08.08.18  loging error to code_area beneath error line
+        }
     }
 }
 
