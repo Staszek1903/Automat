@@ -13,13 +13,17 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<SplitPane dividerPositions="0.0728643216080402" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.162-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<SplitPane dividerPositions="0.0728643216080402" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="537.0" xmlns="http://javafx.com/javafx/8.0.162-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="238.0" prefWidth="398.0">
          <children>
             <MenuBar prefHeight="29.0" prefWidth="398.0">
               <menus>
-                <Menu mnemonicParsing="false" text="Code" />
+                <Menu mnemonicParsing="false" text="Code">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#codeSave" text="Save" />
+                        <MenuItem mnemonicParsing="false" onAction="#codeLoad" text="Load" />
+                     </items></Menu>
                 <Menu mnemonicParsing="false" text="Memory" />
                 <Menu mnemonicParsing="false" text="Help">
                   <items>
@@ -31,7 +35,7 @@
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="345.0" prefWidth="398.0">
          <children>
-            <SplitPane dividerPositions="0.30303030303030304, 0.7904040404040404" prefHeight="365.0" prefWidth="398.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <SplitPane dividerPositions="0.42401500938086306, 0.7354596622889306" prefHeight="365.0" prefWidth="398.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <items>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="299.0" prefWidth="165.0">
                      <children>
@@ -54,11 +58,12 @@
                         <ProgressIndicator fx:id="running_indicator" layoutX="5.0" layoutY="162.0" prefHeight="38.0" prefWidth="78.0" progress="1.0" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane prefHeight="363.0" prefWidth="48.0">
+                  <AnchorPane prefHeight="363.0" prefWidth="114.0">
                      <children>
-                        <TableView fx:id="memory_table" layoutX="6.0" prefHeight="363.0" prefWidth="68.0">
+                        <TableView fx:id="memory_table" prefHeight="363.0" prefWidth="137.0">
                           <columns>
-                            <TableColumn fx:id="memory_column" prefWidth="45.0" sortable="false" text="M" />
+                            <TableColumn fx:id="memory_column" prefWidth="60.0" sortable="false" text="M" />
+                              <TableColumn fx:id="char_column" prefWidth="60.0" text="Char" />
                           </columns>
                         </TableView>
                      </children>

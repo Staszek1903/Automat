@@ -5,11 +5,11 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class MemoryCell {
     private final SimpleIntegerProperty data;
-    // TODO: 08.08.18  private final SimpleStringProperty char_represenation;
+    private final SimpleStringProperty char_representation;
 
     public MemoryCell(int data) {
         this.data = new SimpleIntegerProperty(data);
-        
+        this.char_representation = new SimpleStringProperty(""+(char)data);
     }
 
     public short getData() {
@@ -22,5 +22,18 @@ public class MemoryCell {
 
     public void setData(short data){
         this.data.set(data);
+        this.char_representation.set(""+(char)data);
+    }
+
+    public String getChar_representation() {
+        return char_representation.get();
+    }
+
+    public SimpleStringProperty char_representationProperty(){
+        return char_representation;
+    }
+
+    public void setChar_representation(char a){
+        char_representation.set(""+a);
     }
 }

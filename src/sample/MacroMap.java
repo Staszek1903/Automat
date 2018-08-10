@@ -7,6 +7,7 @@ public class MacroMap {
     private Map macros = new HashMap<String, Short>();
 
     public MacroMap(){
+        setDefaultMacros();
     }
 
     public void setDefaultMacros(){
@@ -16,6 +17,7 @@ public class MacroMap {
 
     public void clear(){
         macros.clear();
+        setDefaultMacros();
     }
 
     public void setMacro(String name, short value){
@@ -30,7 +32,7 @@ public class MacroMap {
         if(!hasMacro(name)) {
             throw new CodeError("undefined macro \"" + name + '\"',0);
         }
-        Integer val = (Integer)macros.get(name);
+        Short val = (Short)macros.get(name);
         return val.shortValue();
     }
 

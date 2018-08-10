@@ -16,6 +16,7 @@ public class Model {
     public short accumulator = 0;
     public short memory_pointer = 0;
     public short program_counter = 0;
+    public String state = new String();
 
 
     public Model(){
@@ -60,21 +61,23 @@ public class Model {
             String label = parser.get_label();
             String inst = parser.get_instruction();
             String param = parser.get_param();
-            System.out.println("l: \"" + label + "\" i: \"" + inst + "\" p: \"" + param + '\"');
 
-            if(param.length() == 0) param = "0";
+            if(inst.length() != 0) {
+                System.out.println("l: \"" + label + "\" i: \"" + inst + "\" p: \"" + param + '\"');
 
-            //exexute
-            short true_param = 0;
-            if(Character.isDigit(param.charAt(0))){
-                true_param = Short.valueOf(param);
+                if(param.length() == 0) param = "0";
+
+                //exexute
+                short true_param = 0;
+                if(Character.isDigit(param.charAt(0))){
+                    true_param = Short.valueOf(param);
+                }
+                else {
+                    true_param = macro_map.getValue(param);
+                }
+
+                dictionary.execute(inst,true_param);
             }
-            else {
-                true_param = macro_map.getValue(param);
-            }
-
-            dictionary.execute(inst,true_param);
-
         }
 
         ++program_counter;
@@ -83,6 +86,9 @@ public class Model {
 
     public void reset(){
         program_counter = 0;
+        accumulator =0;
+        memory_pointer = 0;
+        state = "";
         memoryAssign();
     }
 
@@ -90,7 +96,16 @@ public class Model {
         return memory;
     }
 
+    public short getCurrentMemoryCell(){
+        return memory.get(memory_pointer).getData();
+    }
+
+    public void setCurrentMemoryCell(short data){
+        memory.get(memory_pointer).setData(data);
+    }
+
     private void memoryAssign(){
+        memory.clear();
         for(int i=0; i<capacity; ++i){
             memory.add(new MemoryCell(0));
         }

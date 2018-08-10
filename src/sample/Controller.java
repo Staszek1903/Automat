@@ -12,14 +12,20 @@ import javafx.collections.ObservableList;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
+import javafx.stage.FileChooser;
 import javafx.util.Duration;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 
 
 public class Controller implements Initializable {
@@ -29,7 +35,7 @@ public class Controller implements Initializable {
     @FXML
     private TextArea code_area;
     @FXML
-    private TableColumn memory_column;
+    private TableColumn memory_column, char_column;
     @FXML
     private ProgressIndicator running_indicator;
 
@@ -50,6 +56,9 @@ public class Controller implements Initializable {
         TableView table = memory_column.getTableView();
         memory_column.setCellValueFactory(
                 new PropertyValueFactory<MemoryCell, Integer>("data")
+        );
+        char_column.setCellValueFactory(
+                new PropertyValueFactory<MemoryCell, String>("char_representation")
         );
 
         table.setItems(model.getMemory());
@@ -75,14 +84,50 @@ public class Controller implements Initializable {
         updateDisplay();
     }
 
+    public void codeSave(Event event){
+        FileChooser chooser = new FileChooser();
+        chooser.setTitle("Save Code");
+        File file = chooser.showSaveDialog(code_area.getScene().getWindow());
+
+        try{
+            PrintWriter save = new PrintWriter(file);
+            save.print(code_area.getText());
+            save.close();
+        }
+        catch (FileNotFoundException error){
+            System.out.println(error.getMessage());
+        }
+        System.out.println("SAVE");
+    }
+
+    public void codeLoad(Event event){
+        FileChooser chooser = new FileChooser();
+        chooser.setTitle("Load Code");
+        File file = chooser.showOpenDialog(code_area.getScene().getWindow());
+
+        try{
+            Scanner load = new Scanner(file);
+            String temp_code = new String();
+            while(load.hasNextLine())
+                temp_code += load.nextLine() + "\n";
+
+            code_area.setText(temp_code);
+        }
+        catch (FileNotFoundException error){
+            System.out.println(error.getMessage());
+        }
+        System.out.println("LOAD");
+    }
+
     private void updateDisplay() {
         program_counter.setText(String.valueOf(model.program_counter));
         memory_pointer.setText(String.valueOf(model.memory_pointer));
         accumulator.setText(String.valueOf(model.accumulator));
+        state.setText(model.state);
     }
 
     private void start() {
-        timer = new Timeline(new KeyFrame(Duration.millis(1000), actionEvent -> execute_instruction()));
+        timer = new Timeline(new KeyFrame(Duration.millis(100), actionEvent -> execute_instruction()));
         model.set_program(code_area.getText());
         running = true;
         running_indicator.setProgress(ProgressIndicator.INDETERMINATE_PROGRESS);
@@ -105,7 +150,22 @@ public class Controller implements Initializable {
         catch (CodeError error){
             System.out.println(error.getMessage() + " : " + model.program_counter);
             stop();
-            // TODO: 08.08.18  loging error to code_area beneath error line
+            String temp_code = code_area.getText();
+            int last_endl = 0;
+            for(int i=0; i<=model.program_counter; ++i){
+                last_endl = temp_code.indexOf("\n", last_endl+1);
+            }
+
+            if(last_endl == -1){
+                temp_code += "\n" + "//^!! " + error.getMessage() +" !!\n";
+            }
+            else{
+                temp_code = temp_code.substring(0,last_endl+1)
+                        + "//^!! " + error.getMessage() +" !!\n"
+                        + temp_code.substring(last_endl+1,temp_code.length());
+            }
+
+            code_area.setText(temp_code);
         }
     }
 }
