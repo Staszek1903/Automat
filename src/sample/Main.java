@@ -13,8 +13,8 @@ public class Main extends Application {
         System.out.println("start_start");
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 400, 400));
+        primaryStage.setTitle("Automat");
+        primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
         System.out.println("start_end");
     }

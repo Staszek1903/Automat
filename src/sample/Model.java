@@ -1,13 +1,12 @@
 package sample;
 
-import com.sun.org.apache.bcel.internal.classfile.Code;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.util.ArrayList;
 
 public class Model {
-    private static final int capacity = (int)Math.pow(2,16);
+    private static final int capacity = (int)Math.pow(2,15);
     private ArrayList program_lines;
     private ObservableList<MemoryCell> memory = FXCollections.observableArrayList();
     private Dictionary dictionary = new Dictionary(this);

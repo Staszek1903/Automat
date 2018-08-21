@@ -1,0 +1,59 @@
+lac 1
+pfr 3
+out
+pbc 3
+
+lac 30
+out
+pfr 1
+lac 128
+out
+
+mul1:
+lac 0
+cmp
+jeq mul1_out
+pbc 1
+in
+pfr 2
+add
+out
+pbc 1
+in
+pfr 2
+sub
+pbc 2
+out
+jmp mul1
+
+mul1_out:
+pbc 1
+in
+pfr 2
+add
+out
+
+pfr 1
+lac 129
+out
+pbc 1
+
+// rysowanie
+draw:
+drf 
+lac MAX
+out
+pfr 1
+lac 2
+out
+drf
+
+pfr 1
+in
+pbc 1
+add
+out
+jmp draw
+
+
+

@@ -1,0 +1,23 @@
+//fibbonacci
+
+lac 1
+out
+pfr 1
+out
+
+loop:
+pbc 1
+add
+pfr 2
+out
+
+lac 0
+cmp
+jgt end
+
+
+in
+jmp loop
+
+end:
+out
